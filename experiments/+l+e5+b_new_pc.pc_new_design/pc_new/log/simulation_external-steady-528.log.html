@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Simulation Log</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<link href="./css/jquery.mobile-1.4.1.min.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+<script src="./css/jquery.mobile-1.4.1.min.js"></script>
+<script src="./css/Chart.bundle.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex">
+<a class="qindexHL" rel="external" data-ajax='false' href="../simulation.log.html">Simulation Log</a> |
+<a class="qindex" rel="external" data-ajax='false' href="summary_tree.log.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="errors.log.html">Errors</a> |
+<a class="qindex" rel="external" data-ajax='false' href="performance.log.html">Performance</a>
+</div><h2>INTERNAL CALCULATION LOG<br /></h2>
+<a name="external-steady-528"></a><div data-role="collapsible" data-collapsed="false">
+<h1>external-steady-528 (TIME: 0, Method: NR, TOLTYPE: RELTOL, TOLERANCE: 1e-006)</h1><br><br><hr size="2"><p><h2><b>(NR, GLOBAL ITERATION, TIME: 0) </b></h2></p><hr size="2"><p>Convergence reached.</p>
+<h2>Statistics</h2>
+<table border="1" cellspacing="0" cellpadding="3" summary="Tracing">
+<tr><td nowrap="nowrap"><b>Number of unknowns</b></td><td nowrap="nowrap">7</td></tr>
+<tr><td nowrap="nowrap"><b>Number of valid iterations</b></td><td nowrap="nowrap">7</td></tr>
+<tr><td nowrap="nowrap"><b>Number of valid Jacobian evaluations</b></td><td nowrap="nowrap">1</td></tr>
+<tr><td nowrap="nowrap"><b>Number of valid Broyden estimations</b></td><td nowrap="nowrap">6</td></tr>
+<tr><td nowrap="nowrap"><b>Number of total iterations</b></td><td nowrap="nowrap">7</td></tr>
+<tr><td nowrap="nowrap"><b>Number of total Jacobian evaluations</b></td><td nowrap="nowrap">1</td></tr>
+<tr><td nowrap="nowrap"><b>Number of total Broyden estimations</b></td><td nowrap="nowrap">6</td></tr>
+<tr><td nowrap="nowrap"><b>Number of total residues evaluations</b></td><td nowrap="nowrap">15</td></tr>
+</table>
+<h2>Solver parameters</h2>
+<h3>Global settings</h3>
+<table border="1" cellspacing="0" cellpadding="3" summary="Global settings">
+<tr><td nowrap="nowrap"><b>Global convergence criteria (TOLTYPE)</b></td><td nowrap="nowrap">RELTOL</td></tr>
+<tr><td nowrap="nowrap"><b>Global tolerance (TOLERANCE)</b></td><td nowrap="nowrap">1e-006</td></tr>
+<tr><td nowrap="nowrap"><b>Maximum number of iterations (MAXITER)</b></td><td nowrap="nowrap">10000</td></tr>
+<tr><td nowrap="nowrap"><b>Maximum number of valid/no-valid residue evaluations (MAXFEVAL)</b></td><td nowrap="nowrap">40000</td></tr>
+<tr><td nowrap="nowrap"><b>Maximum number of valid/no-valid Jacobian evaluations (MAXJACEVAL)</b></td><td nowrap="nowrap">60</td></tr>
+<tr><td nowrap="nowrap"><b>Maximum number of consecutive Broyden updates (MAXBROYDEN)</b></td><td nowrap="nowrap">60</td></tr>
+</table>
+<h2>Unknown variables</h2>
+<p>Colors: yellow background means that dynamic is frozen, instead uses the derivative</p>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Unknown variables parameters">
+<tr><th nowrap="nowrap"><b>#<b></th><th nowrap="nowrap"><b>Name<b></th><th nowrap="nowrap"><b>Initial guess</b></th><th nowrap="nowrap"><b>Absolute perturbation</b></th><th nowrap="nowrap"><b>Relative perturbation</b></th><th nowrap="nowrap"><b>Absolute maximum step</b></th><th nowrap="nowrap"><b>Relative maximum step</b></th></tr>
+<tr><td nowrap="nowrap" >1</td><td nowrap="nowrap" ><b>P1-Comb_Chamb.OF</b></td><td nowrap="nowrap" >5.27077903272514</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >2</td><td nowrap="nowrap" ><b>P1-Pump_FUEL_LH2.U</b></td><td nowrap="nowrap" >497.001087037267</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >3</td><td nowrap="nowrap" ><b>P1-Pump_LOX_OXIDIZER.U</b></td><td nowrap="nowrap" >131.857475486262</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >4</td><td nowrap="nowrap" ><b>P1-Comb_Chamb.p_out_ch</b></td><td nowrap="nowrap" >22190.0300665495</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >5</td><td nowrap="nowrap" ><b>P1-Comb_Chamb.M_r</b></td><td nowrap="nowrap" >2.80535548095222</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >6</td><td nowrap="nowrap" ><b>P1-Heat_exchanger_1.h.T</b></td><td nowrap="nowrap" >176.26997024275</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+<tr><td nowrap="nowrap" >7</td><td nowrap="nowrap" ><b>P1-ThrustMonitor_1.M_out</b></td><td nowrap="nowrap" >3.76910997786688</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.5e-008</td><td nowrap="nowrap" >1.79769313e+308</td><td nowrap="nowrap" >1.79769313e+308</td></tr>
+</table>
+</div>
+<h2>Residue equations</h2>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Residue equations parameters">
+<tr><th nowrap="nowrap"><b>#</b></th><th nowrap="nowrap"><b>Normalisation mode</b></th><th nowrap="nowrap"><b>Local tolerance</b></th><th nowrap="nowrap"><b>Residue expression</b></th></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-1-528">Residue-1</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(1)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-2-528">Residue-2</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(2)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-3-528">Residue-3</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(3)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-4-528">Residue-4</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(4)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-5-528">Residue-5</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(5)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-6-528">Residue-6</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1ResidueValue(6)</td></tr>
+<tr><td nowrap="nowrap"><b><a name="Residue-7-528">Residue-7</a></b>:</td><td nowrap="nowrap">ABSTOL</td><td nowrap="nowrap">1e-006</td><td nowrap="nowrap">P1-[(Turbine_FUEL.f_in.W) - (0.7*Injector_FUEL.f_in.W)]</td></tr>
+</table>
+</div>
+<h2>Iterative process results</h2>
+<h3>Unknown tracing table. Jacobian variables plus variables marked with trace flag.</h3>
+<p>Colors: yellow background means that dynamic is frozen, instead uses the derivative. Orange background means highest relative increment</p>
+<p><b>I</b>: Iteration, <b>VI</b>: Valid-iteration, <b>SR</b>: Step-reduction, <b>SRU</b>: Step-reduction-unknown.</p>
+<br/>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Unknowns">
+<tr><th nowrap="nowrap"><b>I</b></th><th nowrap="nowrap"><b>VI</b></th><th nowrap="nowrap"><b>SR</b></th><th nowrap="nowrap"><b>SRU</b></th><th nowrap="nowrap" bgcolor="#4B0082"></th><th nowrap="nowrap"><b> P1-Comb_Chamb.OF</b></th><th nowrap="nowrap"><b> P1-Pump_FUEL_LH2.U</b></th><th nowrap="nowrap"><b> P1-Pump_LOX_OXIDIZER.U</b></th><th nowrap="nowrap"><b> P1-Comb_Chamb.p_out_ch</b></th><th nowrap="nowrap"><b> P1-Comb_Chamb.M_r</b></th><th nowrap="nowrap"><b> P1-Heat_exchanger_1.h.T</b></th><th nowrap="nowrap"><b> P1-ThrustMonitor_1.M_out</b></th><th nowrap="nowrap" bgcolor="#4B0082"></th></tr>
+<tr><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">5.27077903272514</td><td nowrap="nowrap">497.001087037267</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22190.0300665495</td><td nowrap="nowrap">2.80535548095222</td><td nowrap="nowrap">176.26997024275</td><td nowrap="nowrap">3.76910997786688</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">1</td><td nowrap="nowrap">1</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>5.35320650769221</b></td><td nowrap="nowrap">497.001087098167</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22286.4788425515</td><td nowrap="nowrap">2.80295724136882</td><td nowrap="nowrap">177.953560620047</td><td nowrap="nowrap">3.76365458414831</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">2</td><td nowrap="nowrap">2</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>5.35449027824754</b></td><td nowrap="nowrap">497.00108703712</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.5861313881</td><td nowrap="nowrap">2.80293644634498</td><td nowrap="nowrap">177.975237307857</td><td nowrap="nowrap">3.76360962423175</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">3</td><td nowrap="nowrap">3</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>5.35451597372992</b></td><td nowrap="nowrap">497.001087037269</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.6068274301</td><td nowrap="nowrap">2.8029359904889</td><td nowrap="nowrap">177.975550181903</td><td nowrap="nowrap">3.76360858923778</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">4</td><td nowrap="nowrap">4</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">5.35451603396518</td><td nowrap="nowrap">497.001087037267</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.6068719218</td><td nowrap="nowrap">2.80293598954551</td><td nowrap="nowrap" bgcolor="Orange"><b>177.975547819367</b></td><td nowrap="nowrap">3.76360858739965</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">5</td><td nowrap="nowrap">5</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">5.3545160341276</td><td nowrap="nowrap">497.001087037267</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.6068720408</td><td nowrap="nowrap">2.80293598954242</td><td nowrap="nowrap" bgcolor="Orange"><b>177.975547739451</b></td><td nowrap="nowrap">3.76360858739146</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">6</td><td nowrap="nowrap">6</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">5.35451603412769</td><td nowrap="nowrap">497.001087037267</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.6068720409</td><td nowrap="nowrap">2.80293598954242</td><td nowrap="nowrap" bgcolor="Orange"><b>177.97554773751</b></td><td nowrap="nowrap">3.76360858739147</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+<tr><td nowrap="nowrap">7</td><td nowrap="nowrap">7</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">5.35451603412768</td><td nowrap="nowrap">497.001087037267</td><td nowrap="nowrap">131.857475486262</td><td nowrap="nowrap">22287.6068720408</td><td nowrap="nowrap">2.80293598954242</td><td nowrap="nowrap" bgcolor="Orange"><b>177.975547737475</b></td><td nowrap="nowrap">3.76360858739147</td><td nowrap="nowrap" bgcolor="#4B0082"></td></tr>
+</table>
+</div>
+<br/>
+<h3>Increment of unknowns with respect to their initial value.</h3>
+<p>Criteria: &delta;&nbsp;unk is calculated as (unk - unk0) / unk0, where unk0 is the initial value</p>
+<p>Colors: yellow background means that dynamic is frozen, instead uses the derivative. Orange background means highest normalized unknown on iteration</p>
+<p><b>I</b>: Iteration, <b>VI</b>: Valid-iteration, <b>SR</b>: Step-reduction, <b>SRU</b>: Step-reduction-unknown.</p>
+<br/>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Unknowns (normalized)">
+<tr><th nowrap="nowrap"><b>I</b></th><th nowrap="nowrap"><b>VI</b></th><th nowrap="nowrap"><b>SR</b></th><th nowrap="nowrap"><b>SRU</b></th><th nowrap="nowrap" bgcolor="#4B0082"></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Comb_Chamb.OF</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Pump_FUEL_LH2.U</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Pump_LOX_OXIDIZER.U</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Comb_Chamb.p_out_ch</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Comb_Chamb.M_r</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-Heat_exchanger_1.h.T</b></th><th nowrap="nowrap"><b>&delta;&nbsp;P1-ThrustMonitor_1.M_out</b></th></tr>
+<tr><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td></tr>
+<tr><td nowrap="nowrap">1</td><td nowrap="nowrap">1</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0156385753330373</b></td><td nowrap="nowrap">1.22535271497466e-010</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.0043464914519142</td><td nowrap="nowrap">-0.000854879033934483</td><td nowrap="nowrap">0.00955120361669738</td><td nowrap="nowrap">-0.00144739573814549</td></tr>
+<tr><td nowrap="nowrap">2</td><td nowrap="nowrap">2</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158821390543321</b></td><td nowrap="nowrap">-2.94853145486531e-013</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.00439639173746008</td><td nowrap="nowrap">-0.000862291650262897</td><td nowrap="nowrap">0.00967417798255313</td><td nowrap="nowrap">-0.0014593242615432</td></tr>
+<tr><td nowrap="nowrap">3</td><td nowrap="nowrap">3</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158870141367861</b></td><td nowrap="nowrap">5.60426847511249e-015</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.00439732441046305</td><td nowrap="nowrap">-0.000862454145204045</td><td nowrap="nowrap">0.00967595295332966</td><td nowrap="nowrap">-0.00145959886058227</td></tr>
+<tr><td nowrap="nowrap">4</td><td nowrap="nowrap">4</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158870255649374</b></td><td nowrap="nowrap">1.14372826022704e-016</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.0043973264154962</td><td nowrap="nowrap">-0.000862454481486889</td><td nowrap="nowrap">0.009675939550389</td><td nowrap="nowrap">-0.00145959934826424</td></tr>
+<tr><td nowrap="nowrap">5</td><td nowrap="nowrap">5</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158870255957518</b></td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.00439732642085643</td><td nowrap="nowrap">-0.000862454482588819</td><td nowrap="nowrap">0.00967593909701598</td><td nowrap="nowrap">-0.00145959935043549</td></tr>
+<tr><td nowrap="nowrap">6</td><td nowrap="nowrap">6</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158870255957681</b></td><td nowrap="nowrap">1.14372826022704e-016</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.00439732642086103</td><td nowrap="nowrap">-0.000862454482588977</td><td nowrap="nowrap">0.00967593908600379</td><td nowrap="nowrap">-0.00145959935043361</td></tr>
+<tr><td nowrap="nowrap">7</td><td nowrap="nowrap">7</td><td nowrap="nowrap">NO</td><td nowrap="nowrap">-</td><td nowrap="nowrap" bgcolor="#4B0082"></td><td nowrap="nowrap" bgcolor="Orange"><b>0.0158870255957674</b></td><td nowrap="nowrap">0</td><td nowrap="nowrap">0</td><td nowrap="nowrap">0.00439732642085922</td><td nowrap="nowrap">-0.000862454482588977</td><td nowrap="nowrap">0.00967593908580273</td><td nowrap="nowrap">-0.00145959935043337</td></tr>
+</table>
+</div>
+<h3>Convergence process table</h3>
+<p>Colors: yellow background means that dynamic is frozen, instead uses the derivative. Orange background means highest residue on iteration. Green background means convergence reached.</p>
+<p><b>I</b>: Iteration, <b>VI</b>: Valid-iteration.</p>
+<br/>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Residues">
+<tr><th nowrap="nowrap"><b>I</b></th><th nowrap="nowrap"><b>VI</b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-1-528">Residue-1</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-2-528">Residue-2</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-3-528">Residue-3</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-4-528">Residue-4</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-5-528">Residue-5</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-6-528">Residue-6</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-7-528">Residue-7</a></b></th><th nowrap="nowrap"><b>Global Error</b></th><th nowrap="nowrap"><b>Convergence Ratio</b></th></tr>
+<tr><td nowrap="nowrap" >0</td><td nowrap="nowrap"  >0</td><td nowrap="nowrap">-1.11022302462516e-016</td><td nowrap="nowrap">0</td><td nowrap="nowrap">1.77635683940025e-014</td><td nowrap="nowrap">7.95363774841462e-012</td><td nowrap="nowrap" bgcolor="Orange"><b>1445590.67427339</b></td><td nowrap="nowrap">-8.32667268468867e-017</td><td nowrap="nowrap">-0.0540000000000149</td><td nowrap="nowrap" >1445590.67427339</td><td nowrap="nowrap" >1</td></tr>
+<tr><td nowrap="nowrap" >1</td><td nowrap="nowrap"  >1</td><td nowrap="nowrap" bgcolor="Chartreuse">1.71549330296727e-010</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap">0.000256536329612089</td><td nowrap="nowrap">0.000109448546779412</td><td nowrap="nowrap" bgcolor="Orange"><b>16436.8790747225</b></td><td nowrap="nowrap">-1.89807697757727e-006</td><td nowrap="nowrap">-0.000831479291483195</td><td nowrap="nowrap" >16436.8790747226</td><td nowrap="nowrap" >0.0113703549471114</td></tr>
+<tr><td nowrap="nowrap" >2</td><td nowrap="nowrap"  >2</td><td nowrap="nowrap" bgcolor="Chartreuse">-4.12891942858096e-013</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap">5.99075657703452e-006</td><td nowrap="nowrap">1.89199916444949e-006</td><td nowrap="nowrap" bgcolor="Orange"><b>168.561092379503</b></td><td nowrap="nowrap" bgcolor="Chartreuse">-3.09583968322036e-008</td><td nowrap="nowrap">-1.6349686347894e-005</td><td nowrap="nowrap" >168.561092379504</td><td nowrap="nowrap" >0.0102550546008899</td></tr>
+<tr><td nowrap="nowrap" >3</td><td nowrap="nowrap"  >3</td><td nowrap="nowrap" bgcolor="Chartreuse">7.7715611723761e-015</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">1.66848934668451e-008</td><td nowrap="nowrap" bgcolor="Chartreuse">5.27280441531275e-009</td><td nowrap="nowrap" bgcolor="Orange"><b>-3.62479001097381</b></td><td nowrap="nowrap" bgcolor="Chartreuse">-1.00773729638792e-010</td><td nowrap="nowrap" bgcolor="Chartreuse">-3.83399711978427e-008</td><td nowrap="nowrap" >3.62479001097381</td><td nowrap="nowrap" >0.0215043101572505</td></tr>
+<tr><td nowrap="nowrap" >4</td><td nowrap="nowrap"  >4</td><td nowrap="nowrap" bgcolor="Chartreuse">1.11022302462516e-016</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">4.55564475032588e-011</td><td nowrap="nowrap" bgcolor="Chartreuse">1.05337960576435e-011</td><td nowrap="nowrap" bgcolor="Orange"><b>-0.105199173092842</b></td><td nowrap="nowrap" bgcolor="Chartreuse">-1.16635867630777e-013</td><td nowrap="nowrap" bgcolor="Chartreuse">-1.03153929842392e-010</td><td nowrap="nowrap" >0.105199173092842</td><td nowrap="nowrap" >0.0290221427377472</td></tr>
+<tr><td nowrap="nowrap" >5</td><td nowrap="nowrap"  >5</td><td nowrap="nowrap" bgcolor="Chartreuse">-1.11022302462516e-016</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">1.33226762955019e-014</td><td nowrap="nowrap" bgcolor="Orange"><b>-0.00250615272670984</b></td><td nowrap="nowrap" bgcolor="Chartreuse">-6.03683769639929e-016</td><td nowrap="nowrap" bgcolor="Chartreuse">-5.41788836017076e-014</td><td nowrap="nowrap" >0.00250615272670984</td><td nowrap="nowrap" >0.0238229318066794</td></tr>
+<tr><td nowrap="nowrap" >6</td><td nowrap="nowrap"  >6</td><td nowrap="nowrap" bgcolor="Chartreuse">1.11022302462516e-016</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">2.48689957516035e-014</td><td nowrap="nowrap" bgcolor="Chartreuse">8.88178419700125e-016</td><td nowrap="nowrap" bgcolor="Orange"><b>-4.56487759947777e-005</b></td><td nowrap="nowrap" bgcolor="Chartreuse">-2.77555756156289e-017</td><td nowrap="nowrap" bgcolor="Chartreuse">8.88178419700125e-016</td><td nowrap="nowrap" >4.56487759947777e-005</td><td nowrap="nowrap" >0.0182146824127143</td></tr>
+<tr><td nowrap="nowrap" bgcolor="Chartreuse">7</td><td nowrap="nowrap" bgcolor="Chartreuse" >7</td><td nowrap="nowrap" bgcolor="Chartreuse">-1.11022302462516e-016</td><td nowrap="nowrap" bgcolor="Chartreuse">0</td><td nowrap="nowrap" bgcolor="Chartreuse">3.5527136788005e-015</td><td nowrap="nowrap" bgcolor="Chartreuse">6.21724893790088e-015</td><td nowrap="nowrap" bgcolor="Chartreuse">-6.64032995700836e-007</td><td nowrap="nowrap" bgcolor="Chartreuse">-2.08166817117217e-017</td><td nowrap="nowrap" bgcolor="Chartreuse">-1.33226762955019e-015</td><td nowrap="nowrap" bgcolor="Chartreuse">6.64032995700836e-007</td><td nowrap="nowrap" bgcolor="Chartreuse">0.0145465673773335</td></tr>
+</table>
+</div>
+<p>Convergence reached.</p>
+<h3>Calculated Jacobian Matrix</h3>
+<p>Colors: red background means null row or column</p>
+<p>Iteration 1: Calculated Jacobian matrix (J) (Valid iteration 1)</p>
+<div style="width: 100%; height: 100%; overflow: auto">
+<table border="1" cellspacing="0" cellpadding="3" summary="Jacobian matrix (Iteration 0)">
+<tr><th nowrap="nowrap" bgcolor="#A8A8A8"><b>JACOBIAN (J)</b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-1-528">Residue-1</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-2-528">Residue-2</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-3-528">Residue-3</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-4-528">Residue-4</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-5-528">Residue-5</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-6-528">Residue-6</a></b></th><th nowrap="nowrap"><b><a rel="external" data-ajax='false' href="#Residue-7-528">Residue-7</a></b></th></tr>
+<tr><td nowrap="nowrap"><b>P1-Comb_Chamb.OF</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >-0.76893806037988</td><td nowrap="nowrap" >-0.194545212642802</td><td nowrap="nowrap" >8999469.73126918</td><td nowrap="nowrap" >0.00317619675241813</td><td nowrap="nowrap" >0.655121366044401</td></tr>
+<tr><td nowrap="nowrap"><b>P1-Pump_FUEL_LH2.U</b></td><td nowrap="nowrap" >0.0028168951825689</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td></tr>
+<tr><td nowrap="nowrap"><b>P1-Pump_LOX_OXIDIZER.U</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0.0106175243780635</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td></tr>
+<tr><td nowrap="nowrap"><b>P1-Comb_Chamb.p_out_ch</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0.00065715320971901</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td></tr>
+<tr><td nowrap="nowrap"><b>P1-Comb_Chamb.M_r</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >-6.68651737221128</td><td nowrap="nowrap" >-1541680.98179023</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td></tr>
+<tr><td nowrap="nowrap"><b>P1-Heat_exchanger_1.h.T</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >-1301439.82180323</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td></tr>
+<tr><td nowrap="nowrap"><b>P1-ThrustMonitor_1.M_out</b></td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0</td><td nowrap="nowrap" >0.0479902811431127</td><td nowrap="nowrap" >0</td></tr>
+</table>
+</div>
+<p>Iteration 2: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 2)</p>
+<p>Iteration 3: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 3)</p>
+<p>Iteration 4: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 4)</p>
+<p>Iteration 5: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 5)</p>
+<p>Iteration 6: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 6)</p>
+<p>Iteration 7: Broyden factorized rank-one update of 1/J matrix. (Valid iteration 7)</p>
+<div data-role="collapsible" data-mini="true" data-theme="d">
+<h1>***  WARNING level 1 (code 7:213:24:98) path: ThrustMonitor_1. in file "LPRES_CompBasic.el" at line 809  ***</h1>
+<p>Assertion violation((ThrustMonitor_1.p_out / ThrustMonitor_1.p_amb) > ((1.88 * ThrustMonitor_1.M_out - 1) ** -0.64)): ACCORDING TO SCHMUCKER CRITERION, THE NOZZLE HAS A REGION OF DETACHMENT!</p>
+</div>
+
+</div>
+<br/><p><font size="2">(Document generated automatically with PROOSIS Version: 3.8.1 Date: 2020:07:10 Time: 18:05:34)</font></p>
+</div>
+</div>
+</body>
+</html>

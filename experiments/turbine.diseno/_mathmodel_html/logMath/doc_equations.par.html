@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbine.diseno.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbine.diseno.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Equations<br /></h2>
+Equations: 27<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>Nozzle.p_amb = LPRES.ISA_Pressure(LPRES.Altitude)<br/>
+<a name="e2">[E-2] </a>Turbine.tau = Turbine.m.Power / Nozzle.g.W<br/>
+<a name="e3">[E-3] </a>Nozzle.g.Tt = Inlet.Tt - Turbine.tau / LPRES.cp(Inlet.fluidV)<br/>
+<a name="e4">[E-4] </a>Turbine.alpha = Nozzle.g.Tt / Inlet.Tt<br/>
+<a name="e5">[E-5] </a>Turbine.beta = (1 - (1 - Turbine.alpha) / Turbine.eta_d) ** (1 / ((LPRES.gamma(Inlet.fluidV) - 1) / LPRES.gamma(Inlet.fluidV)))<br/>
+<a name="e6">[E-6] </a>Nozzle.g.pt = Turbine.beta * Inlet.pt<br/>
+<a name="e7">[E-7] </a>Nozzle.PR = Nozzle.g.pt / Nozzle.p_amb<br/>
+<a name="e8">[E-8] </a>Nozzle.PR_sl = ((LPRES.gamma(Inlet.fluidV) + 1) / 2) ** (LPRES.gamma(Inlet.fluidV) / (LPRES.gamma(Inlet.fluidV) - 1))<br/>
+<a name="e9">[E-9] </a>Nozzle.p_out_ch = Nozzle.g.pt / Nozzle.PR_sl<br/>
+<a name="e10">[E-10] </a>Nozzle.A_sl = Nozzle.g.W * sqrt(Nozzle.g.Tt * LPRES.R(Inlet.fluidV)) / Nozzle.g.pt / LPRES.FGAMMA(Inlet.fluidV)<br/>
+<a name="e11">[E-11] </a>Nozzle.M_out =  ZONE[2] (Nozzle.PR < Nozzle.PR_sl) sqrt(2 * (Nozzle.PR ** ((LPRES.gamma(Inlet.fluidV) - 1) / LPRES.gamma(Inlet.fluidV)) - 1) / (LPRES.gamma(Inlet.fluidV) - 1))	  OTHERS 1<br/>
+<a name="e12">[E-12] </a>Nozzle.A =  ZONE[1] (Nozzle.M_out > 0) Nozzle.A_sl * ((2 + (LPRES.gamma(Inlet.fluidV) - 1) * Nozzle.M_out ** 2) / (LPRES.gamma(Inlet.fluidV) + 1)) ** ((LPRES.gamma(Inlet.fluidV) + 1) / (2 * (LPRES.gamma(Inlet.fluidV) - 1))) / Nozzle.M_out	  OTHERS Nozzle.A_sl * ((2 + (LPRES.gamma(Inlet.fluidV) - 1) * Nozzle.M_out ** 2) / (LPRES.gamma(Inlet.fluidV) + 1)) ** ((LPRES.gamma(Inlet.fluidV) + 1) / (2 * (LPRES.gamma(Inlet.fluidV) - 1))) / -Nozzle.M_out<br/>
+<a name="e13">[E-13] </a>Nozzle.p_out = MATH.max(Nozzle.p_amb, Nozzle.p_out_ch)<br/>
+<a name="e14">[E-14] </a>Nozzle.T_out = Nozzle.g.Tt / (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * Nozzle.M_out ** 2)<br/>
+<a name="e15">[E-15] </a>Nozzle.v_out = Nozzle.M_out * sqrt(LPRES.gamma(Inlet.fluidV) * LPRES.R(Inlet.fluidV) * Nozzle.T_out)<br/>
+<a name="e16">[E-16] </a>Nozzle.Thrust = Nozzle.g.W * Nozzle.v_out + Nozzle.A * (Nozzle.p_out - Nozzle.p_amb)<br/>
+<a name="e17">[E-17] </a>Nozzle.i.Data[1] = Nozzle.Thrust<br/>
+<a name="e18">[E-18] </a>Turbine.m.N = 0.10471975511966 * Turbine.rpm<br/>
+<a name="e19">[E-19] </a>Turbine.MFP = Nozzle.g.W * sqrt(Inlet.Tt) / Inlet.pt<br/>
+<a name="e20">[E-20] </a>Turbine.theta = 1 / Turbine.alpha<br/>
+<a name="e21">[E-21] </a>Turbine.pi = 1 / Turbine.beta<br/>
+<a name="e22">[E-22] </a>Turbine.A_in = Turbine.MFP / (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * MATH.min(Turbine.M_2, 1) ** 2) ** (-(LPRES.gamma(Inlet.fluidV) + 1) / 2 / (LPRES.gamma(Inlet.fluidV) - 1)) / MATH.min(Turbine.M_2, 1) / sqrt(LPRES.gamma(Inlet.fluidV)) * sqrt(LPRES.R(Inlet.fluidV))<br/>
+<a name="e23">[E-23] </a>Turbine.V_z2 = Turbine.cos_2 * Turbine.M_2 * sqrt(LPRES.gamma(Inlet.fluidV) * LPRES.R(Inlet.fluidV) * Inlet.Tt / (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * Turbine.M_2 ** 2))<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v38" data-ajax='false'>Turbine.U</a>&nbsp;</td><td><a href="doc_vars.par.html#v38" data-ajax='false'></a>&nbsp;</td><td>m/s&nbsp;</td><td>Blade speed&nbsp;</td><td>500&nbsp;</td><td>[E-26] Turbine.psi = Turbine.tau / Turbine.U ** 2&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e24">[E-24] </a>Turbine.phi = Turbine.V_z2 / Turbine.U<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e25">[E-25] </a>Turbine.psi = (Turbine.psi_d + 1) / Turbine.phi_d * Turbine.phi - 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e26">[E-26] </a>Turbine.psi = Turbine.tau / Turbine.U ** 2	{I@Turbine.U}<br/>
+</b><hr>END OF BOX 1<hr><a name="e27">[E-27] </a>Turbine.r_m = Turbine.U / Turbine.m.N<br/>
+</body></html>

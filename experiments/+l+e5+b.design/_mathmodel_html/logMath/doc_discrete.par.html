@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b.design.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b.design.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Discrete Blocks<br /></h2>
+ASSERT (Liquid == LPRES.State(Inlet_LH2.fluidV)) WARNING "ONLY LIQUIDS CAN GO THROUGH THE PUMP!"
+<br/>
+ASSERT (Liquid == LPRES.State(Inlet_LOX.fluidV)) WARNING "ONLY LIQUIDS CAN GO THROUGH THE PUMP!"
+<br/>
+ASSERT (Gas == LPRES.State(Turbine_FUEL.f_in.fluid)) FATAL "ONLY GASES CAN GO THROUGH THE CHOKED TURBINE!"
+<br/>
+WHEN ((Comb_Chamb.fluid_O[LOX] * Comb_Chamb.fluid_F[LOX] + Comb_Chamb.fluid_O[NTO] * Comb_Chamb.fluid_F[NTO] + Comb_Chamb.fluid_O[H2O2] * Comb_Chamb.fluid_F[H2O2] + Comb_Chamb.fluid_O[HNO3] * Comb_Chamb.fluid_F[HNO3] + Comb_Chamb.fluid_O[LF2] * Comb_Chamb.fluid_F[LF2] + Comb_Chamb.fluid_O[RP_1] * Comb_Chamb.fluid_F[RP_1] + Comb_Chamb.fluid_O[LCH4] * Comb_Chamb.fluid_F[LCH4] + Comb_Chamb.fluid_O[LH2] * Comb_Chamb.fluid_F[LH2] + Comb_Chamb.fluid_O[N2H4] * Comb_Chamb.fluid_F[N2H4] + Comb_Chamb.fluid_O[UDMH] * Comb_Chamb.fluid_F[UDMH] + Comb_Chamb.fluid_O[MMH] * Comb_Chamb.fluid_F[MMH] + Comb_Chamb.fluid_O[JP_10] * Comb_Chamb.fluid_F[JP_10] + Comb_Chamb.fluid_O[Kerox] * Comb_Chamb.fluid_F[Kerox] + Comb_Chamb.fluid_O[Oil] * Comb_Chamb.fluid_F[Oil] + Comb_Chamb.fluid_O[H2O] * Comb_Chamb.fluid_F[H2O] + Comb_Chamb.fluid_O[IPA] * Comb_Chamb.fluid_F[IPA] + Comb_Chamb.fluid_O[Air] * Comb_Chamb.fluid_F[Air] + Comb_Chamb.fluid_O[Ar] * Comb_Chamb.fluid_F[Ar] + Comb_Chamb.fluid_O[CH4] * Comb_Chamb.fluid_F[CH4] + Comb_Chamb.fluid_O[CO] * Comb_Chamb.fluid_F[CO] + Comb_Chamb.fluid_O[CO2] * Comb_Chamb.fluid_F[CO2] + Comb_Chamb.fluid_O[H2] * Comb_Chamb.fluid_F[H2] + Comb_Chamb.fluid_O[He] * Comb_Chamb.fluid_F[He] + Comb_Chamb.fluid_O[N2] * Comb_Chamb.fluid_F[N2] + Comb_Chamb.fluid_O[O2] * Comb_Chamb.fluid_F[O2] + Comb_Chamb.fluid_O[MMH_vapour] * Comb_Chamb.fluid_F[MMH_vapour] + Comb_Chamb.fluid_O[NH3] * Comb_Chamb.fluid_F[NH3] + Comb_Chamb.fluid_O[H2O_vapour] * Comb_Chamb.fluid_F[H2O_vapour]) != 0)  THEN
+	Comb_Chamb.Combustion =  FALSE 
+	END WHEN<br/>
+WHEN ((Comb_Chamb.fluid_O[LOX] * Comb_Chamb.fluid_F[LOX] + Comb_Chamb.fluid_O[NTO] * Comb_Chamb.fluid_F[NTO] + Comb_Chamb.fluid_O[H2O2] * Comb_Chamb.fluid_F[H2O2] + Comb_Chamb.fluid_O[HNO3] * Comb_Chamb.fluid_F[HNO3] + Comb_Chamb.fluid_O[LF2] * Comb_Chamb.fluid_F[LF2] + Comb_Chamb.fluid_O[RP_1] * Comb_Chamb.fluid_F[RP_1] + Comb_Chamb.fluid_O[LCH4] * Comb_Chamb.fluid_F[LCH4] + Comb_Chamb.fluid_O[LH2] * Comb_Chamb.fluid_F[LH2] + Comb_Chamb.fluid_O[N2H4] * Comb_Chamb.fluid_F[N2H4] + Comb_Chamb.fluid_O[UDMH] * Comb_Chamb.fluid_F[UDMH] + Comb_Chamb.fluid_O[MMH] * Comb_Chamb.fluid_F[MMH] + Comb_Chamb.fluid_O[JP_10] * Comb_Chamb.fluid_F[JP_10] + Comb_Chamb.fluid_O[Kerox] * Comb_Chamb.fluid_F[Kerox] + Comb_Chamb.fluid_O[Oil] * Comb_Chamb.fluid_F[Oil] + Comb_Chamb.fluid_O[H2O] * Comb_Chamb.fluid_F[H2O] + Comb_Chamb.fluid_O[IPA] * Comb_Chamb.fluid_F[IPA] + Comb_Chamb.fluid_O[Air] * Comb_Chamb.fluid_F[Air] + Comb_Chamb.fluid_O[Ar] * Comb_Chamb.fluid_F[Ar] + Comb_Chamb.fluid_O[CH4] * Comb_Chamb.fluid_F[CH4] + Comb_Chamb.fluid_O[CO] * Comb_Chamb.fluid_F[CO] + Comb_Chamb.fluid_O[CO2] * Comb_Chamb.fluid_F[CO2] + Comb_Chamb.fluid_O[H2] * Comb_Chamb.fluid_F[H2] + Comb_Chamb.fluid_O[He] * Comb_Chamb.fluid_F[He] + Comb_Chamb.fluid_O[N2] * Comb_Chamb.fluid_F[N2] + Comb_Chamb.fluid_O[O2] * Comb_Chamb.fluid_F[O2] + Comb_Chamb.fluid_O[MMH_vapour] * Comb_Chamb.fluid_F[MMH_vapour] + Comb_Chamb.fluid_O[NH3] * Comb_Chamb.fluid_F[NH3] + Comb_Chamb.fluid_O[H2O_vapour] * Comb_Chamb.fluid_F[H2O_vapour]) == 0)  THEN
+	Comb_Chamb.Combustion =  TRUE 
+	END WHEN<br/>
+ASSERT (Gas == LPRES.State(ThrustMonitor_1.g.fluid)) FATAL "ONLY GASES CAN GO THROUGH THE THRUST MONITOR!"
+<br/>
+ASSERT (ThrustMonitor_1.M_out >= 1) KILLPOINT "THE CONVERGENT-DIVERGENT NOZZLE MUST BE CHOKED!"
+<br/>
+ASSERT ((ThrustMonitor_1.p_out / ThrustMonitor_1.p_amb) &gt; ((1.88 * ThrustMonitor_1.M_out - 1) ** -0.64)) WARNING "ACCORDING TO SCHMUCKER CRITERION, THE NOZZLE HAS A REGION OF DETACHMENT!"
+<br/>
+ASSERT (Gas == LPRES.State(Turbine_FUEL.f_in.fluid)) FATAL "ONLY GASES CAN GO THROUGH THE CHOKED TURBINE!"
+<br/>
+ASSERT (Injector_FUEL.A &gt; 0) WARNING "NEGATIVE INJECTOR AREA"
+<br/>
+ASSERT ( FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Gas OR  TRUE  AND LPRES.State(Inlet_LH2.fluidV) == Liquid) WARNING "CHECK INJECTOR TYPE! SELECTED TYPE DOES NOT MATCH ACTUAL FLUID STATE THROUGH INJECTOR"
+<br/>
+ASSERT (Injector_OXIDIZER.A &gt; 0) WARNING "NEGATIVE INJECTOR AREA"
+<br/>
+ASSERT ( FALSE  AND LPRES.State(Inlet_LOX.fluidV) == Gas OR  TRUE  AND LPRES.State(Inlet_LOX.fluidV) == Liquid) WARNING "CHECK INJECTOR TYPE! SELECTED TYPE DOES NOT MATCH ACTUAL FLUID STATE THROUGH INJECTOR"
+<br/>
+ASSERT (Gas == LPRES.State(Turbine_FUEL.f_in.fluid)) FATAL "ONLY GASES CAN GO THROUGH THE NOZZLE!"
+<br/>
+ASSERT ( FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Liquid OR  FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Gas OR  TRUE  AND LPRES.State(Inlet_LH2.fluidV) == Liquid OR  FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Gas) KILLPOINT "CHECK HEAT EXCHANGER TYPE! SELECTED TYPE DOES NOT MATCH ACTUAL FLUID STATE THROUGH HEAT EXCHANGER"
+<br/>
+</body></html>

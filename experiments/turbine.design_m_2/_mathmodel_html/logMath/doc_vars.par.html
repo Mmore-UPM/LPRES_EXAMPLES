@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbine.design_m_2.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../turbine.design_m_2.par.html">Summary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Variables<br /></h2>
+<br/>
+<font size="4" color="black">Types</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>NAME
+&nbsp;</b></color></td>
+</tr>
+<tr><td>ENUM&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#ChemName" data-ajax='false'>LPRES.ChemName</a>&nbsp;</td></tr>
+<tr><td>ENUM&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#ChemState" data-ajax='false'>LPRES.ChemState</a>&nbsp;</td></tr>
+<tr><td>SET_OF&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#ChemName" data-ajax='false'>LPRES.ChemName</a>&nbsp;</td></tr>
+<tr><td>SET_OF&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#ChemName" data-ajax='false'>LPRES.ChemName</a>&nbsp;</td></tr>
+<tr><td>SET_OF&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#ChemName" data-ajax='false'>LPRES.ChemName</a>&nbsp;</td></tr>
+</table>
+<br/>
+<font size="4" color="black">Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>TYPE&nbsp;</b></color></td>
+<td><color="black"><b>MATH-TYPE&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>LRANGE&nbsp;</b></color></td>
+<td><color="black"><b>RRANGE&nbsp;</b></color></td>
+<td><color="black"><b>STATION&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>IS-ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>EDIT&nbsp;</b></color></td>
+<td><color="black"><b>TRACE&nbsp;</b></color></td>
+<td><color="black"><b>STORE&nbsp;</b></color></td>
+<td><color="black"><b>DECK-IN&nbsp;</b></color></td>
+<td><color="black"><b>DECK-OUT
+&nbsp;</b></color></td>
+</tr>
+<tr><td><a name="v1">1</a>&nbsp;</td><td>Inlet.Tt&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v2">2</a>&nbsp;</td><td>Inlet.W&nbsp;</td><td>kg/s&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v3">3</a>&nbsp;</td><td>Inlet.f.Tt&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v4">4</a>&nbsp;</td><td>Inlet.f.W&nbsp;</td><td>kg/s&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v5">5</a>&nbsp;</td><td>Inlet.f.fluid&nbsp;</td><td>-&nbsp;</td><td>REAL[LPRES.ChemName]&nbsp;</td><td>DISCRETE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v6">6</a>&nbsp;</td><td>Inlet.f.pt&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v7">7</a>&nbsp;</td><td>Inlet.fluid&nbsp;</td><td>&nbsp;</td><td><a href="file:///C:/PROOSIS_3.8.1/LPRES/libs/LPRES/docs/LPRES.enumerativeTypes.html#LiquidsGases" data-ajax='false'>LPRES.LiquidsGases</a>&nbsp;</td><td>DATA_VAR&nbsp;</td><td>18&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v8">8</a>&nbsp;</td><td>Inlet.fluidV&nbsp;</td><td>-&nbsp;</td><td>REAL[LPRES.ChemName]&nbsp;</td><td>DISCRETE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v9">9</a>&nbsp;</td><td>Inlet.pt&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v10">10</a>&nbsp;</td><td>LPRES.Altitude&nbsp;</td><td>m&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v11">11</a>&nbsp;</td><td>LPRES.R_u&nbsp;</td><td>J/(kmol·K)&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>8314&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v12">12</a>&nbsp;</td><td>LPRES.T_std&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>288.15&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v13">13</a>&nbsp;</td><td>LPRES.g_0&nbsp;</td><td>m/s^2&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>9.80665&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v14">14</a>&nbsp;</td><td>LPRES.p_std&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>101325&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v15">15</a>&nbsp;</td><td>MATH.Inf&nbsp;</td><td>&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v16">16</a>&nbsp;</td><td>MATH.PI&nbsp;</td><td>&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>3.14159265358979&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v17">17</a>&nbsp;</td><td>MATH.ZERO&nbsp;</td><td>&nbsp;</td><td>REAL&nbsp;</td><td>CTE&nbsp;</td><td>0&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v18">18</a>&nbsp;</td><td>Nozzle.A&nbsp;</td><td>m^2&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>0.02&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v19">19</a>&nbsp;</td><td>Nozzle.A_sl&nbsp;</td><td>m^2&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v20">20</a>&nbsp;</td><td>Nozzle.M_out&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v21">21</a>&nbsp;</td><td>Nozzle.PR&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v22">22</a>&nbsp;</td><td>Nozzle.PR_sl&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v23">23</a>&nbsp;</td><td>Nozzle.T_out&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v24">24</a>&nbsp;</td><td>Nozzle.Thrust&nbsp;</td><td>N&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v25">25</a>&nbsp;</td><td>Nozzle.g.Tt&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v26">26</a>&nbsp;</td><td>Nozzle.g.W&nbsp;</td><td>kg/s&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v27">27</a>&nbsp;</td><td>Nozzle.g.fluid&nbsp;</td><td>-&nbsp;</td><td>REAL[LPRES.ChemName]&nbsp;</td><td>DISCRETE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v28">28</a>&nbsp;</td><td>Nozzle.g.pt&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v29">29</a>&nbsp;</td><td>Nozzle.i.Data&nbsp;</td><td>-&nbsp;</td><td>REAL[1]&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v30">30</a>&nbsp;</td><td>Nozzle.i.n&nbsp;</td><td>&nbsp;</td><td>INTEGER&nbsp;</td><td>CTE&nbsp;</td><td>1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v31">31</a>&nbsp;</td><td>Nozzle.p_amb&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v32">32</a>&nbsp;</td><td>Nozzle.p_out&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v33">33</a>&nbsp;</td><td>Nozzle.p_out_ch&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v34">34</a>&nbsp;</td><td>Nozzle.v_out&nbsp;</td><td>m/s&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v35">35</a>&nbsp;</td><td>Turbine.A_in&nbsp;</td><td>m^2&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>0.01&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v36">36</a>&nbsp;</td><td>Turbine.MFP&nbsp;</td><td>m·s·K^.5&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v37">37</a>&nbsp;</td><td>Turbine.M_2&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>0.1&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v38">38</a>&nbsp;</td><td>Turbine.U&nbsp;</td><td>m/s&nbsp;</td><td>REAL&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>500&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v39">39</a>&nbsp;</td><td>Turbine.V_z2&nbsp;</td><td>m/s&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v40">40</a>&nbsp;</td><td>Turbine.alpha&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v41">41</a>&nbsp;</td><td>Turbine.beta&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v42">42</a>&nbsp;</td><td>Turbine.cos_2&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DATA_VAR&nbsp;</td><td>0.4&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v43">43</a>&nbsp;</td><td>Turbine.eta&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DATA_VAR&nbsp;</td><td>0.9&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v44">44</a>&nbsp;</td><td>Turbine.eta_d&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DATA_VAR&nbsp;</td><td>0.9&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v45">45</a>&nbsp;</td><td>Turbine.f_in.Tt&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v46">46</a>&nbsp;</td><td>Turbine.f_in.W&nbsp;</td><td>kg/s&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v47">47</a>&nbsp;</td><td>Turbine.f_in.fluid&nbsp;</td><td>-&nbsp;</td><td>REAL[LPRES.ChemName]&nbsp;</td><td>DISCRETE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v48">48</a>&nbsp;</td><td>Turbine.f_in.pt&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v49">49</a>&nbsp;</td><td>Turbine.f_out.Tt&nbsp;</td><td>K&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v50">50</a>&nbsp;</td><td>Turbine.f_out.W&nbsp;</td><td>kg/s&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v51">51</a>&nbsp;</td><td>Turbine.f_out.fluid&nbsp;</td><td>-&nbsp;</td><td>REAL[LPRES.ChemName]&nbsp;</td><td>DISCRETE&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v52">52</a>&nbsp;</td><td>Turbine.f_out.pt&nbsp;</td><td>Pa&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v53">53</a>&nbsp;</td><td>Turbine.m.N&nbsp;</td><td>rad/s&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>0&nbsp;</td><td>1e+38&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v54">54</a>&nbsp;</td><td>Turbine.m.Power&nbsp;</td><td>W&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v55">55</a>&nbsp;</td><td>Turbine.phi&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v56">56</a>&nbsp;</td><td>Turbine.phi_d&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DATA_VAR&nbsp;</td><td>0.5&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v57">57</a>&nbsp;</td><td>Turbine.pi&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v58">58</a>&nbsp;</td><td>Turbine.psi&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v59">59</a>&nbsp;</td><td>Turbine.psi_d&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>DATA_VAR&nbsp;</td><td>1.8&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v60">60</a>&nbsp;</td><td>Turbine.r_m&nbsp;</td><td>m&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>0.05&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v61">61</a>&nbsp;</td><td>Turbine.rpm&nbsp;</td><td>rpm&nbsp;</td><td>REAL&nbsp;</td><td>BOUNDARY&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v62">62</a>&nbsp;</td><td>Turbine.tau&nbsp;</td><td>J/kg&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+<tr><td><a name="v63">63</a>&nbsp;</td><td>Turbine.theta&nbsp;</td><td>-&nbsp;</td><td>REAL&nbsp;</td><td>EXPLICIT&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO&nbsp;</td><td>YES&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td><td>NO&nbsp;</td></tr>
+</table>
+</body></html>

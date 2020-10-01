@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<variables version="1.0" cdate="2020:07:12:21:29:56">
+ <variable name="ABS_ERROR" value="1e-006" category="INTERNAL_VAR"/>
+ <variable name="CINT" value="0" category="INTERNAL_VAR"/>
+ <variable name="CODE_ERROR" value="917" category="INTERNAL_VAR"/>
+ <variable name="CODE_ESI" value="1:917:11:98" category="INTERNAL_VAR"/>
+ <variable name="CODE_STATUS" value="STEADY_OK" category="INTERNAL_VAR"/>
+ <variable name="IMETHOD" value="DASSL" category="INTERNAL_VAR"/>
+ <variable name="INIT_INTEG_STEP" value="-1" category="INTERNAL_VAR"/>
+ <variable name="Inlet.Tt" value="1500" units="K" category="BOUNDARY"/>
+ <variable name="Inlet.W" value="40" units="kg/s" category="BOUNDARY"/>
+ <variable name="Inlet.f.Tt" value="1500" units="K" category="BOUNDARY"/>
+ <variable name="Inlet.f.W" value="40" units="kg/s" category="BOUNDARY"/>
+ <variable name="Inlet.f.fluid[Air]" value="1" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Ar]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[CH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[CO2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[CO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_Lv]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_M]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_T_boil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_c]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_cond]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_cp]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_cp_g]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_rho]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Comb_prod_visc]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[H2O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[H2O]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[H2O_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[H2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[HNO3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[He]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[IPA]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[JP_10]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Kerox]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[LCH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[LF2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[LH2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[LOX]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[MMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[MMH_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[N2H4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[N2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[NH3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[NTO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[Oil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[RP_1]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.fluid[UDMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.f.pt" value="3039750" units="Pa" category="BOUNDARY"/>
+ <variable name="Inlet.fluid" value="Air" category="DATA_VAR"/>
+ <variable name="Inlet.fluidV[Air]" value="1" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Ar]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[CH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[CO2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[CO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_Lv]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_M]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_T_boil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_c]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_cond]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_cp]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_cp_g]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_rho]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Comb_prod_visc]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[H2O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[H2O]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[H2O_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[H2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[HNO3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[He]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[IPA]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[JP_10]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Kerox]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[LCH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[LF2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[LH2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[LOX]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[MMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[MMH_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[N2H4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[N2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[NH3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[NTO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[Oil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[RP_1]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.fluidV[UDMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Inlet.pt" value="3039750" units="Pa" category="BOUNDARY"/>
+ <variable name="LPRES.Altitude" value="0" units="m" category="BOUNDARY"/>
+ <variable name="LPRES.R_u" value="8314" units="J/(kmol·K)" category="CTE"/>
+ <variable name="LPRES.T_std" value="288.15" units="K" category="CTE"/>
+ <variable name="LPRES.g_0" value="9.80665" units="m/s^2" category="CTE"/>
+ <variable name="LPRES.p_std" value="101325" units="Pa" category="CTE"/>
+ <variable name="LPRES_EXAMPLES.globalDebugLevel" value="1" category="EXPERIMENT_VAR"/>
+ <variable name="MATH.Inf" value="1e+038" category="CTE"/>
+ <variable name="MATH.PI" value="3.14159265358979" category="CTE"/>
+ <variable name="MATH.ZERO" value="0" category="CTE"/>
+ <variable name="MAXBROYDEN" value="60" category="INTERNAL_VAR"/>
+ <variable name="MAXFEVAL" value="40000" category="INTERNAL_VAR"/>
+ <variable name="MAXITER" value="10000" category="INTERNAL_VAR"/>
+ <variable name="MAXJACEVAL" value="60" category="INTERNAL_VAR"/>
+ <variable name="MAX_ATTEMPTS_TO_CONVERGE" value="5000" category="INTERNAL_VAR"/>
+ <variable name="MAX_INTEG_STEP" value="-1" category="INTERNAL_VAR"/>
+ <variable name="NL_DX_ABS" value="1.5e-008" category="INTERNAL_VAR"/>
+ <variable name="NL_DX_REL" value="1.5e-008" category="INTERNAL_VAR"/>
+ <variable name="NL_STEP_ABS" value="1.7976931348623157e+308" category="INTERNAL_VAR"/>
+ <variable name="NL_STEP_REL" value="1.7976931348623157e+308" category="INTERNAL_VAR"/>
+ <variable name="NSTEPS" value="1" category="INTERNAL_VAR"/>
+ <variable name="Nozzle.A" value="0.14996301041446536" units="m^2" category="EXPLICIT"/>
+ <variable name="Nozzle.A_sl" value="0.14966237672039917" units="m^2" category="EXPLICIT"/>
+ <variable name="Nozzle.M_out" value="0.95158770904160217" units="-" category="EXPLICIT"/>
+ <variable name="Nozzle.PR" value="1.790896045587248" units="-" category="EXPLICIT"/>
+ <variable name="Nozzle.PR_sl" value="1.8932155308532" units="-" category="EXPLICIT"/>
+ <variable name="Nozzle.T_out" value="637.41314128773126" units="K" category="EXPLICIT"/>
+ <variable name="Nozzle.Thrust" value="19269.640880690451" units="N" category="EXPLICIT"/>
+ <variable name="Nozzle.g.Tt" value="752.98804780876492" units="K" category="EXPLICIT"/>
+ <variable name="Nozzle.g.W" value="40" units="kg/s" category="BOUNDARY"/>
+ <variable name="Nozzle.g.fluid[Air]" value="1" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Ar]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[CH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[CO2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[CO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_Lv]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_M]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_T_boil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_c]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_cond]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_cp]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_cp_g]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_rho]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Comb_prod_visc]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[H2O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[H2O]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[H2O_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[H2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[HNO3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[He]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[IPA]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[JP_10]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Kerox]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[LCH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[LF2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[LH2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[LOX]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[MMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[MMH_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[N2H4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[N2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[NH3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[NTO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[Oil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[RP_1]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.fluid[UDMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Nozzle.g.pt" value="181462.54181912792" units="Pa" category="EXPLICIT"/>
+ <variable name="Nozzle.i.Data[1]" value="19269.640880690451" units="-" category="EXPLICIT"/>
+ <variable name="Nozzle.i.n" value="1" category="CTE"/>
+ <variable name="Nozzle.p_amb" value="101325" units="Pa" category="EXPLICIT"/>
+ <variable name="Nozzle.p_out" value="101325" units="Pa" category="EXPLICIT"/>
+ <variable name="Nozzle.p_out_ch" value="95848.855485222884" units="Pa" category="EXPLICIT"/>
+ <variable name="Nozzle.v_out" value="481.74102201726129" units="m/s" category="EXPLICIT"/>
+ <variable name="REL_ERROR" value="1e-006" category="INTERNAL_VAR"/>
+ <variable name="REPORT_MODE" value="IS_EVENT" category="INTERNAL_VAR"/>
+ <variable name="SMETHOD" value="NR" category="INTERNAL_VAR"/>
+ <variable name="TIME" value="0" category="INTERNAL_VAR"/>
+ <variable name="TOLERANCE" value="1e-006" category="INTERNAL_VAR"/>
+ <variable name="TOLTYPE" value="RELTOL" category="INTERNAL_VAR"/>
+ <variable name="TSTOP" value="0" category="INTERNAL_VAR"/>
+ <variable name="Turbine.A_in" value="0.012609949541256613" units="m^2" category="EXPLICIT"/>
+ <variable name="Turbine.MFP" value="0.00050964498346343175" units="m·s·K^.5" category="EXPLICIT"/>
+ <variable name="Turbine.M_2" value="1.1735126778946015" units="-" category="ALGEBRAIC"/>
+ <variable name="Turbine.U" value="645.49722436790285" units="m/s" category="ALGEBRAIC"/>
+ <variable name="Turbine.V_z2" value="322.74861218395142" units="m/s" category="EXPLICIT"/>
+ <variable name="Turbine.alpha" value="0.50199203187251" units="-" category="EXPLICIT"/>
+ <variable name="Turbine.beta" value="0.059696534852908267" units="-" category="EXPLICIT"/>
+ <variable name="Turbine.cos_2" value="0.4" units="-" category="DATA_VAR"/>
+ <variable name="Turbine.eta" value="0.9" units="-" category="DATA_VAR"/>
+ <variable name="Turbine.eta_d" value="0.9" units="-" category="DATA_VAR"/>
+ <variable name="Turbine.f_in.Tt" value="1500" units="K" category="BOUNDARY"/>
+ <variable name="Turbine.f_in.W" value="40" units="kg/s" category="BOUNDARY"/>
+ <variable name="Turbine.f_in.fluid[Air]" value="1" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Ar]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[CH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[CO2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[CO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_Lv]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_M]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_T_boil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_c]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_cond]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_cp]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_cp_g]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_rho]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Comb_prod_visc]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[H2O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[H2O]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[H2O_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[H2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[HNO3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[He]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[IPA]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[JP_10]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Kerox]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[LCH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[LF2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[LH2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[LOX]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[MMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[MMH_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[N2H4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[N2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[NH3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[NTO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[Oil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[RP_1]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.fluid[UDMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_in.pt" value="3039750" units="Pa" category="BOUNDARY"/>
+ <variable name="Turbine.f_out.Tt" value="752.98804780876492" units="K" category="EXPLICIT"/>
+ <variable name="Turbine.f_out.W" value="40" units="kg/s" category="BOUNDARY"/>
+ <variable name="Turbine.f_out.fluid[Air]" value="1" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Ar]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[CH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[CO2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[CO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_Lv]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_M]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_T_boil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_c]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_cond]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_cp]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_cp_g]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_rho]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Comb_prod_visc]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[H2O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[H2O]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[H2O_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[H2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[HNO3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[He]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[IPA]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[JP_10]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Kerox]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[LCH4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[LF2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[LH2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[LOX]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[MMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[MMH_vapour]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[N2H4]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[N2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[NH3]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[NTO]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[O2]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[Oil]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[RP_1]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.fluid[UDMH]" value="0" units="-" category="DISCRETE"/>
+ <variable name="Turbine.f_out.pt" value="181462.54181912792" units="Pa" category="EXPLICIT"/>
+ <variable name="Turbine.m.N" value="2617.9938779915" units="rad/s" category="EXPLICIT"/>
+ <variable name="Turbine.m.Power" value="30000000" units="W" category="BOUNDARY"/>
+ <variable name="Turbine.phi" value="0.5" units="-" category="BOUNDARY"/>
+ <variable name="Turbine.phi_d" value="0.5" units="-" category="DATA_VAR"/>
+ <variable name="Turbine.pi" value="16.75139105584589" units="-" category="EXPLICIT"/>
+ <variable name="Turbine.psi" value="1.8" units="-" category="EXPLICIT"/>
+ <variable name="Turbine.psi_d" value="1.8" units="-" category="DATA_VAR"/>
+ <variable name="Turbine.r_m" value="0.24656177762459938" units="m" category="EXPLICIT"/>
+ <variable name="Turbine.rpm" value="25000" units="rpm" category="BOUNDARY"/>
+ <variable name="Turbine.tau" value="750000" units="J/kg" category="EXPLICIT"/>
+ <variable name="Turbine.theta" value="1.9920634920634921" units="-" category="EXPLICIT"/>
+ <variable name="rc" value="TRUE" category="EXPERIMENT_VAR"/>
+</variables>

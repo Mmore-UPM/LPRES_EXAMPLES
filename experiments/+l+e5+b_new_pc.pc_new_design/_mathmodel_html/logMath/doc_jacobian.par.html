@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_new_pc.pc_new_design.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_new_pc.pc_new_design.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Jacobian Matrix Information<br /></h2>
+<br/>
+<font size="4" color="black">Jacobian Independent Variables</font><br/>
+<table border="1" cellspacing="0"><tr><td><color="black"><b>POS&nbsp;</b></color></td>
+<td><color="black"><b>VARIABLE&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>CATEGORY&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION&nbsp;</b></color></td>
+<td><color="black"><b>BOX
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v234" data-ajax='false'>Pump_FUEL_LH2.U</a>&nbsp;</td><td><a href="doc_vars.par.html#v234" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>m/s&nbsp;</td><td>Blade speed&nbsp;</td><td>500&nbsp;</td><td>[E-12] Pump_FUEL_LH2.psi = -Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2&nbsp;</td><td>1&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><a href="doc_vars.par.html#v257" data-ajax='false'>Pump_LOX_OXIDIZER.U</a>&nbsp;</td><td><a href="doc_vars.par.html#v257" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>m/s&nbsp;</td><td>Blade speed&nbsp;</td><td>500&nbsp;</td><td>[E-22] Pump_LOX_OXIDIZER.psi = -Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2&nbsp;</td><td>2&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><a href="doc_vars.par.html#v63" data-ajax='false'>Comb_Chamb.p_out_ch</a>&nbsp;</td><td><a href="doc_vars.par.html#v63" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>Pa&nbsp;</td><td>Choked outlet pressure&nbsp;</td><td>100&nbsp;</td><td>[E-272] ThrustMonitor_1.g.A_out / Comb_Chamb.A_th = LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))&nbsp;</td><td>3&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><a href="doc_vars.par.html#v11" data-ajax='false'>Comb_Chamb.M_r</a>&nbsp;</td><td><a href="doc_vars.par.html#v11" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Mach number at the characteristic section of heat exchange&nbsp;</td><td>&nbsp;</td><td>[E-276] Comb_Chamb.AR_r = 1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))&nbsp;</td><td>4&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td><a href="doc_vars.par.html#v144" data-ajax='false'>Heat_exchanger_1.h.T</a>&nbsp;</td><td><a href="doc_vars.par.html#v144" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>K&nbsp;</td><td>Temperature&nbsp;</td><td>1&nbsp;</td><td>[E-295] Contact_Wall_1.Q = Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet&nbsp;</td><td>5&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td><a href="doc_vars.par.html#v293" data-ajax='false'>ThrustMonitor_1.M_out</a>&nbsp;</td><td><a href="doc_vars.par.html#v293" data-ajax='false'></a>&nbsp;</td><td>ALGEBRAIC&nbsp;</td><td>-&nbsp;</td><td>Gas Mach number&nbsp;</td><td>100&nbsp;</td><td>[E-309] ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c = sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))&nbsp;</td><td>6&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

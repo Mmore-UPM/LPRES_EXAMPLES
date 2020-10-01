@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="map" version="1.3.0" component="turbine" partition="off_design">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="case1" noplotted="no" description="Description" run="yes" type="standard case">
+    <restoreState id="ImportGeometry" description="Restore State">
+      <general>
+        <run value="yes"/>
+        <initialization value="yes"/>
+        <restore format="T_TEXT" filename="@LPRES_EXAMPLES@/experiments/turbine.design/design/report.rpt.xml" filterEquiv="TRUE" category="" type="RESTORE_STATE"/>
+      </general>
+    </restoreState>
+    <parametric_steady id="parametric1" description="Parametric">
+      <parametric_transient id="parametric1" description="Parametric">
+        <settings>
+          <advanced advancedTransient="false" nonLinearSolver="false"/>
+        </settings>
+        <general>
+          <tsolver nsteps="1" tstop="" initIntegStep="" time="" cint="" reportMode="IS_STEP" maxrelerror="" maxIntegStep="" imethod="DASSL" maxabserror="" warnStepReduct="FALSE" rdigits="" tsmitg="FALSE"/>
+          <nlsolver maxfval="40000" toltype="RELTOL" toleranceUser="" toleranceUsed="suggested" smethod="NR" maxbroyden="60" tolerance="" maxjaceval="60" rdigits="" maxiter="10000"/>
+          <stopSimulation stopBadOperation="no" stopAlgebraicsFails="yes"/>
+          <debug level=""/>
+          <report id="" vars="" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        </general>
+      </parametric_transient>
+      <general>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        <initialization value="no"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Inlet.Tt" alias="" value="1500"/>
+          <variable id="Inlet.pt" alias="" value="101325*30"/>
+          <variable id="LPRES.Altitude" alias="" value="0"/>
+        </bounds>
+        <initial>
+          <variable id="Turbine.M_2" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Nozzle.g.W" right="Nozzle.A_sl * LPRES.FGAMMA(Inlet.fluidV) * Nozzle.g.pt / sqrt(Nozzle.g.Tt * LPRES.R(Inlet.fluidV))" internal="yes" tolerance="1e-06"/>
+        </closure>
+        <parameters>
+          <parameter id="Turbine.rpm" alias="Turbine.rpm" mode="INTERVAL" submode="By Final Value">
+            <feature id="final" value="25000"/>
+            <feature id="initial" value="5000"/>
+            <feature id="step" value="10"/>
+          </parameter>
+          <parameter id="Nozzle.A" alias="Nozzle.A" mode="INTERVAL" submode="By Final Value">
+            <feature id="final" value="0.3"/>
+            <feature id="initial" value="0.01"/>
+            <feature id="step" value="50"/>
+          </parameter>
+          <output id="Turbine.M_2"/>
+        </parameters>
+      </global>
+    </parametric_steady>
+    <restoreState id="ImportGeometry2" description="Restore State">
+      <general>
+        <run value="yes"/>
+        <initialization value="yes"/>
+        <restore format="T_TEXT" filename="@LPRES_EXAMPLES@/experiments/turbine.design/design/report.rpt.xml" filterEquiv="TRUE" category="" type="RESTORE_STATE"/>
+      </general>
+    </restoreState>
+    <steady id="designpoint" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="no"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Inlet.Tt" alias="" value="1500"/>
+          <variable id="Inlet.pt" alias="" value="101325*30"/>
+          <variable id="LPRES.Altitude" alias="" value="0"/>
+          <variable id="Turbine.rpm" alias="" value="25000"/>
+        </bounds>
+        <initial>
+          <variable id="Turbine.M_2" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Nozzle.g.W" right="Nozzle.A_sl * LPRES.FGAMMA(Inlet.fluidV) * Nozzle.g.pt / sqrt(Nozzle.g.Tt * LPRES.R(Inlet.fluidV))" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+</experiment>

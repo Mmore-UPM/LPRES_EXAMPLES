@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="exp1" version="1.3.0" component="LE5B_valves" partition="valves_design">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="Valve_designpoint" noplotted="no" description="Description" run="yes" type="standard case">
+    <steady id="design" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="CCV.dp" alias="" value="0.11e6"/>
+          <variable id="CCV.f_in.W" alias="" value="3"/>
+          <variable id="Comb_Chamb.OF" alias="" value="5.8"/>
+          <variable id="Comb_Chamb.f_O.p_c" alias="" value="3.67e6"/>
+          <variable id="FlowMeter_LOX.f_in.W" alias="" value="26"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="0.3e6"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="0.5e6"/>
+          <variable id="LPRES.Altitude" alias="" value="100e3"/>
+          <variable id="MFV.dp" alias="" value=".11e6"/>
+          <variable id="MOV.dp" alias="" value=".14e6"/>
+          <variable id="Pump_FUEL_LH2.dp" alias="" value="6e6"/>
+          <variable id="Pump_FUEL_LH2.phi" alias="" value="Pump_FUEL_LH2.phi_d"/>
+          <variable id="Pump_LOX_OXIDIZER.dp" alias="" value="6.5e6"/>
+          <variable id="Pump_LOX_OXIDIZER.phi" alias="" value="Pump_LOX_OXIDIZER.phi_d"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+          <variable id="Turbine_FUEL.rpm" alias="" value="52100"/>
+          <variable id="Turbine_OXIDIZER.rpm" alias="" value="17700"/>
+        </bounds>
+        <initial>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="10" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Heat_exchanger_1.h.T" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="200" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MFV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MOV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CCV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Injector_FUEL.f_in.pt" right="MFV.f_in.pt - 0.5 * Comb_Chamb.f_F.W ** 2 / (MFV.rho_f * MFV.A ** 2)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="FlowMeter_LOX.f_in.pt" right="MOV.f_in.pt - 0.5 * FlowMeter_LOX.f_in.W ** 2 / (MOV.rho_f * MOV.A ** 2)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger_1.f_in.pt" right="CCV.f_in.pt - 0.5 * CCV.f_in.W ** 2 / (CCV.rho_f * CCV.A ** 2)" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+</experiment>

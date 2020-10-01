@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="LE5B_valves" partition="valves_design">
+<noDerivatives value="TRUE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Comb_Chamb.A_th"/>
+  <variable name="Comb_Chamb.A_wet"/>
+  <variable name="Injector_FUEL.A"/>
+  <variable name="Injector_OXIDIZER.A"/>
+  <variable name="Nozzle_1.A"/>
+  <variable name="Pump_FUEL_LH2.A_in"/>
+  <variable name="Pump_FUEL_LH2.r_m"/>
+  <variable name="Pump_LOX_OXIDIZER.A_in"/>
+  <variable name="Pump_LOX_OXIDIZER.r_m"/>
+  <variable name="Turbine_FUEL.A_in"/>
+  <variable name="Turbine_OXIDIZER.A_in"/>
+</noDatas>
+<boundaries>
+  <variable name="CCV.dp"/>
+  <variable name="CCV.f_in.W"/>
+  <variable name="Comb_Chamb.OF"/>
+  <variable name="Comb_Chamb.f_O.p_c"/>
+  <variable name="FlowMeter_LOX.f_in.W"/>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="MFV.dp"/>
+  <variable name="MOV.dp"/>
+  <variable name="Pump_FUEL_LH2.dp"/>
+  <variable name="Pump_FUEL_LH2.phi"/>
+  <variable name="Pump_LOX_OXIDIZER.dp"/>
+  <variable name="Pump_LOX_OXIDIZER.phi"/>
+  <variable name="Turbine_FUEL.f_in.Tt"/>
+  <variable name="Turbine_FUEL.rpm"/>
+  <variable name="Turbine_OXIDIZER.rpm"/>
+</boundaries>
+<algebraics>
+  <variable name="Pump_FUEL_LH2.U"/>
+  <variable name="Pump_LOX_OXIDIZER.U"/>
+  <variable name="Comb_Chamb.p_out_ch"/>
+  <variable name="Comb_Chamb.M_r"/>
+  <variable name="Heat_exchanger_1.h.T"/>
+  <variable name="ThrustMonitor_1.M_out"/>
+  <variable name="MFV.A"/>
+  <variable name="MOV.A"/>
+  <variable name="CCV.A"/>
+</algebraics>
+</partitionInfo>

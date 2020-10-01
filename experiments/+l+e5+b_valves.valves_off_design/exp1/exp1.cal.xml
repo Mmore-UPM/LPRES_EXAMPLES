@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="exp1" version="1.3.0" component="LE5B_valves" partition="valves_off_design">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="off_design_standard" noplotted="no" description="Description" run="no" type="standard case">
+    <parametric_steady id="parametric2" description="Parametric">
+      <parametric_transient id="parametric2" description="Parametric">
+        <settings>
+          <advanced advancedTransient="false" nonLinearSolver="false"/>
+        </settings>
+        <general>
+          <tsolver nsteps="1" tstop="" initIntegStep="" time="" cint="" reportMode="IS_STEP" maxrelerror="" maxIntegStep="" imethod="DASSL" maxabserror="" warnStepReduct="FALSE" rdigits="" tsmitg="FALSE"/>
+          <nlsolver maxfval="40000" toltype="RELTOL" toleranceUser="" toleranceUsed="suggested" smethod="NR" maxbroyden="60" tolerance="" maxjaceval="60" rdigits="" maxiter="10000"/>
+          <stopSimulation stopBadOperation="no" stopAlgebraicsFails="yes"/>
+          <debug level=""/>
+          <report id="" vars="" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        </general>
+      </parametric_transient>
+      <general>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Comb_Chamb.OF" alias="" value="5.8"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="5e5"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="3e5"/>
+          <variable id="LPRES.Altitude" alias="" value="100e3"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+        </bounds>
+        <initial>
+          <variable id="CCV.f_in.W" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="3" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2.79" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.W_F" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="4.48275862" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_FUEL_LH2.tau_id" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="-82191.7808" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.tau_id" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="108.858023" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="430" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="130" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="4.99" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MOV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CCV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Turbine_OXIDIZER.MFP" right="CCV.f_in.W * sqrt(Turbine_OXIDIZER.f_in.Tt) / Turbine_OXIDIZER.f_in.pt" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="-Heat_exchanger_1.h.Q" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CCV.f_in.W" right="Nozzle_1.A_sl * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) * Nozzle_1.g.pt / sqrt(Nozzle_1.g.Tt * LPRES.R(Turbine_FUEL.f_in.fluid))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(Comb_Chamb.W_O + Comb_Chamb.W_F) * Comb_Chamb.fluid_P_decomp[CombProd] / ThrustMonitor_1.g.W * Comb_Chamb.fluid_P_decomp[CombProd_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.T_c) + Comb_Chamb.W_IO / ThrustMonitor_1.g.W * Inlet_LOX.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - FlowMeter_LOX.f_in.Tt) + Comb_Chamb.W_IF / ThrustMonitor_1.g.W * Inlet_LH2.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.f_F.T)" right="0" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="FlowMeter_LOX.f_in.pt" right="MOV.f_in.pt - 0.5 * FlowMeter_LOX.f_in.W ** 2 / (MOV.rho_f * MOV.A ** 2)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger_1.f_in.pt" right="CCV.f_in.pt - 0.5 * CCV.f_in.W ** 2 / (CCV.rho_f * CCV.A ** 2)" internal="yes" tolerance="1e-06"/>
+        </closure>
+        <parameters>
+          <parameter id="MFV.A" alias="MFV.A" mode="INTERVAL" submode="By Final Value">
+            <feature id="final" value="0.000001"/>
+            <feature id="initial" value="0.00111859"/>
+            <feature id="step" value="100"/>
+          </parameter>
+          <output id="Pump_FUEL_LH2.U"/>
+          <output id="Pump_LOX_OXIDIZER.U"/>
+          <output id="Comb_Chamb.p_out_ch"/>
+          <output id="Comb_Chamb.M_r"/>
+          <output id="Heat_exchanger_1.h.T"/>
+          <output id="ThrustMonitor_1.M_out"/>
+        </parameters>
+      </global>
+    </parametric_steady>
+  </case>
+  <case id="off_design_param" noplotted="no" description="Description" run="yes" type="parametric case">
+    <parameters>
+      <parameter id="MFV.A" alias="" mode="INTERVAL" submode="By Final Value">
+        <feature id="final" value="7.6515655e-5"/>
+        <feature id="initial" value="0.00111859425"/>
+        <feature id="step" value="100"/>
+      </parameter>
+    </parameters>
+    <restoreState id="ImportGeometry" description="Restore State">
+      <general>
+        <run value="yes"/>
+        <initialization value="yes"/>
+        <restore format="T_TEXT" filename="@LPRES_EXAMPLES@/experiments/+l+e5+b_valves.valves_design/exp1/report.rpt.xml" filterEquiv="TRUE" category="" type="RESTORE_STATE"/>
+      </general>
+    </restoreState>
+    <steady id="analysis" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-04" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Comb_Chamb.OF" alias="" value="5.8"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="0.3e6"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="0.5e6"/>
+          <variable id="LPRES.Altitude" alias="" value="100e3"/>
+          <variable id="MFV.A" alias="" value="0.00111859"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+        </bounds>
+        <initial>
+          <variable id="CCV.f_in.W" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="3" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2.79" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.W_F" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="4.48" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_FUEL_LH2.tau_id" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="-82191.78" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.tau_id" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="-5416.66" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="438" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="108" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2109" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="4.98" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MOV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.00141841629" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CCV.A" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.000748597693" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Turbine_OXIDIZER.MFP" right="CCV.f_in.W * sqrt(Turbine_OXIDIZER.f_in.Tt) / Turbine_OXIDIZER.f_in.pt" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="-Heat_exchanger_1.h.Q" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CCV.f_in.W" right="Nozzle_1.A_sl * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) * Nozzle_1.g.pt / sqrt(Nozzle_1.g.Tt * LPRES.R(Turbine_FUEL.f_in.fluid))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(Comb_Chamb.W_O + Comb_Chamb.W_F) * Comb_Chamb.fluid_P_decomp[CombProd] / ThrustMonitor_1.g.W * Comb_Chamb.fluid_P_decomp[CombProd_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.T_c) + Comb_Chamb.W_IO / ThrustMonitor_1.g.W * Inlet_LOX.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - FlowMeter_LOX.f_in.Tt) + Comb_Chamb.W_IF / ThrustMonitor_1.g.W * Inlet_LH2.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.f_F.T)" right="0" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="FlowMeter_LOX.f_in.pt" right="MOV.f_in.pt - 0.5 * FlowMeter_LOX.f_in.W ** 2 / (MOV.rho_f * MOV.A ** 2)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger_1.f_in.pt" right="CCV.f_in.pt - 0.5 * CCV.f_in.W ** 2 / (CCV.rho_f * CCV.A ** 2)" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+</experiment>

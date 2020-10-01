@@ -2,7 +2,12 @@
 <library version="1.1.1">
  <filedeps>
   <file name="version.el"/>
-  <file name="pruebainicial.eds"/>
+  <file name="Turbine_test.eds"/>
+  <file name="turbine.eds"/>
+  <file name="LE5B.eds"/>
+  <file name="prueba.eds"/>
+  <file name="LE5B_new_pc.eds"/>
+  <file name="LE5B_valves.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

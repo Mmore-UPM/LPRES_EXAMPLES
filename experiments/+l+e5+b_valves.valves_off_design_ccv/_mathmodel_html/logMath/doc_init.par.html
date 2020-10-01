@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.valves_off_design_ccv.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.valves_off_design_ccv.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Init Blocks<br /></h2>
+<br/>
+Note 1: Variables called "__aux_int_..." are internal integer variables, used to iterate<br/>
+Note 2: FOR statements are converted to WHILE statements<br/>
+<br/>
+  -- init(Inlet_LH2.Inlet,100)<br/>
+LPRES.Init_fluid(Inlet_LH2.fluid, Inlet_LH2.fluidV)<br/>
+  -- init(Inlet_LOX.Inlet,100)<br/>
+LPRES.Init_fluid(Inlet_LOX.fluid, Inlet_LOX.fluidV)<br/>
+  -- init(Comb_Chamb.CombCha,100)<br/>
+ASSERT Comb_Chamb.AR_r >= 1 KILLPOINT "AR_r CAN NOT BE LOWER THAN 1!"
+<br/>
+LPRES.Init_fluid(Comb_prod, ThrustMonitor_1.g.fluid)<br/>
+Comb_Chamb.Combustion =  TRUE <br/>
+IF Comb_Chamb.Zone == Convergent THEN
+	Comb_Chamb.M_r = 0.001
+	ELSE
+	Comb_Chamb.M_r = 2.80123632766838
+	END IF<br/>
+  -- init(Heat_exchanger_1.Heat_exchanger,100)<br/>
+ASSERT  FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Liquid OR  FALSE  AND LPRES.State(Inlet_LH2.fluidV) == Gas WARNING "FLUID CHANGED ITS STATE!"
+<br/>
+  -- init(Nozzle_1.Nozzle,0)<br/>
+Nozzle_1.g.pt = 10000000<br/>
+</body></html>

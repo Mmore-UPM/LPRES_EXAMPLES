@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="design_point" version="1.3.0" component="LE5B" partition="design">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="case1" noplotted="no" description="Description" run="yes" type="standard case">
+    <steady id="design" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Comb_Chamb.OF" alias="" value="5.8"/>
+          <variable id="Comb_Chamb.f_O.p_c" alias="" value="3.67e6"/>
+          <variable id="FlowMeter_LOX.f_in.W" alias="" value="26"/>
+          <variable id="Heat_exchanger_1.f_in.W" alias="" value="3"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="0.3e6"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="0.5e6"/>
+          <variable id="LPRES.Altitude" alias="" value="100e3"/>
+          <variable id="Pump_FUEL_LH2.dp" alias="" value="6e6"/>
+          <variable id="Pump_FUEL_LH2.phi" alias="" value="Pump_FUEL_LH2.phi_d"/>
+          <variable id="Pump_LOX_OXIDIZER.dp" alias="" value="6.5e6"/>
+          <variable id="Pump_LOX_OXIDIZER.phi" alias="" value="Pump_LOX_OXIDIZER.phi_d"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+          <variable id="Turbine_FUEL.rpm" alias="" value="52100"/>
+          <variable id="Turbine_OXIDIZER.rpm" alias="" value="17700"/>
+        </bounds>
+        <initial>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="10" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Heat_exchanger_1.h.T" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="200" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+  <case id="analysis" noplotted="no" description="Description" run="no" type="parametric case">
+    <parameters>
+      <parameter id="LPRES.Altitude" alias="" mode="INTERVAL" submode="By Final Value">
+        <feature id="final" value="100e3"/>
+        <feature id="initial" value="0"/>
+        <feature id="step" value="1"/>
+      </parameter>
+      <parameter id="Heat_exchanger_1.f_in.W" alias="" mode="INTERVAL" submode="By Final Value">
+        <feature id="final" value="1.617"/>
+        <feature id="initial" value="4.317"/>
+        <feature id="step" value="50"/>
+      </parameter>
+    </parameters>
+    <design id="extended_steady2" description="Extended Steady">
+      <general>
+        <caltype type="ONE ITERATION LOOP"/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="3"/>
+        <debugInequalities levelInequalities="-1"/>
+        <residuesTypeInequalities type="ABSTOL"/>
+        <forceRecalculateJacobianInequalities forceRecalculateJacobian="yes"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <result id="result.rpt" patternNameReportsPoints="" callSteady="yes" createReportPoints="no" create="yes" displayOutput="yes"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <initial/>
+        <bounds/>
+        <unknowns/>
+      </global>
+      <point id="Point1" activatedFunctionCall="yes" calculateSteadyAfterResolution="yes" nameFunction="" saveAlgebraicDynamic="yes">
+        <bounds>
+          <variable id="Comb_Chamb.f_O.p_c" alias="" comment="" value="3.67e6" category="BOUNDARY"/>
+          <variable id="FlowMeter_LOX.f_in.W" alias="" comment="" value="26" category="BOUNDARY"/>
+          <variable id="Heat_exchanger_1.f_in.W" alias="" comment="" value="4.167" category="BOUNDARY"/>
+          <variable id="Inlet_LH2.Tt" alias="" comment="" value="21" category="BOUNDARY"/>
+          <variable id="Inlet_LH2.pt" alias="" comment="" value="3e5" category="BOUNDARY"/>
+          <variable id="Inlet_LOX.Tt" alias="" comment="" value="90" category="BOUNDARY"/>
+          <variable id="Inlet_LOX.pt" alias="" comment="" value="5e5" category="BOUNDARY"/>
+          <variable id="LPRES.Altitude" alias="" comment="" value="0" category="BOUNDARY"/>
+          <variable id="Pump_FUEL_LH2.dp" alias="" comment="" value="6e6" category="BOUNDARY"/>
+          <variable id="Pump_FUEL_LH2.phi" alias="" comment="" value="Pump_FUEL_LH2.phi_d" category="BOUNDARY"/>
+          <variable id="Pump_LOX_OXIDIZER.dp" alias="" comment="" value="6.5e6" category="BOUNDARY"/>
+          <variable id="Pump_LOX_OXIDIZER.phi" alias="" comment="" value="Pump_LOX_OXIDIZER.phi_d" category="BOUNDARY"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" comment="" value="140" category="BOUNDARY"/>
+          <variable id="Turbine_FUEL.rpm" alias="" comment="" value="52100" category="BOUNDARY"/>
+          <variable id="Turbine_OXIDIZER.rpm" alias="" comment="" value="17700" category="BOUNDARY"/>
+        </bounds>
+        <unknowns>
+          <variable id="Comb_Chamb.OF" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="4.2" maxStepRel="1.79769313e+308" category="BOUNDARY" dxRel="1.5e-08"/>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="438" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="108" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="2110" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="2.79060687" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+          <variable id="Heat_exchanger_1.h.T" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="183" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" comment="" value="4.99" maxStepRel="1.79769313e+308" category="ALGEBRAIC" dxRel="1.5e-08"/>
+        </unknowns>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" comment="" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06" tolimposed="false" isActive="true"/>
+          <equation oper="=" toltype="ABSTOL" comment="" left="Turbine_FUEL.f_in.W" right="0.7*Injector_FUEL.f_in.W" internal="no" tolerance="1e-06" tolimposed="false" isActive="true"/>
+        </closure>
+        <inequalities/>
+      </point>
+    </design>
+  </case>
+  <case id="case3" noplotted="no" description="Description" run="no" type="standard case">
+    <restoreState id="ImportGeometry" description="Restore State">
+      <general>
+        <run value="yes"/>
+        <initialization value="yes"/>
+        <restore format="T_TEXT" filename="@LPRES_EXAMPLES@/experiments/+l+e5+b.design/design_point/report.rpt.xml" filterEquiv="TRUE" category="" type="RESTORE_STATE"/>
+      </general>
+    </restoreState>
+    <parametric_steady id="parametric2" description="Parametric">
+      <parametric_transient id="parametric2" description="Parametric">
+        <settings>
+          <advanced advancedTransient="false" nonLinearSolver="false"/>
+        </settings>
+        <general>
+          <tsolver nsteps="1" tstop="" initIntegStep="" time="" cint="" reportMode="IS_STEP" maxrelerror="" maxIntegStep="" imethod="DASSL" maxabserror="" warnStepReduct="FALSE" rdigits="" tsmitg="FALSE"/>
+          <nlsolver maxfval="40000" toltype="RELTOL" toleranceUser="" toleranceUsed="suggested" smethod="NR" maxbroyden="60" tolerance="" maxjaceval="60" rdigits="" maxiter="10000"/>
+          <stopSimulation stopBadOperation="no" stopAlgebraicsFails="yes"/>
+          <debug level=""/>
+          <report id="" vars="" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        </general>
+      </parametric_transient>
+      <general>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="REPORT_TABLE"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Comb_Chamb.f_O.p_c" alias="" value="3.67e6"/>
+          <variable id="FlowMeter_LOX.f_in.W" alias="" value="26"/>
+          <variable id="Heat_exchanger_1.f_in.W" alias="" value="3.13"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="5e5"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="3e5"/>
+          <variable id="Pump_FUEL_LH2.dp" alias="" value="6e6"/>
+          <variable id="Pump_FUEL_LH2.phi" alias="" value="Pump_FUEL_LH2.phi_d"/>
+          <variable id="Pump_LOX_OXIDIZER.dp" alias="" value="6.5e6"/>
+          <variable id="Pump_LOX_OXIDIZER.phi" alias="" value="Pump_LOX_OXIDIZER.phi_d"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+          <variable id="Turbine_FUEL.rpm" alias="" value="52100"/>
+          <variable id="Turbine_OXIDIZER.rpm" alias="" value="17700"/>
+        </bounds>
+        <initial>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="430" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="130" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="2.79" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Heat_exchanger_1.h.T" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="180" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="4.99" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+        </closure>
+        <parameters>
+          <parameter id="LPRES.Altitude" alias="LPRES.Altitude" mode="INTERVAL" submode="By Final Value">
+            <feature id="final" value="100e3"/>
+            <feature id="initial" value="0"/>
+            <feature id="step" value="1"/>
+          </parameter>
+          <parameter id="Comb_Chamb.OF" alias="Comb_Chamb.OF" mode="INTERVAL" submode="By Final Value">
+            <feature id="final" value="15"/>
+            <feature id="initial" value="3"/>
+            <feature id="step" value="100"/>
+          </parameter>
+          <output id="Pump_FUEL_LH2.U"/>
+          <output id="Pump_LOX_OXIDIZER.U"/>
+          <output id="Comb_Chamb.p_out_ch"/>
+          <output id="Comb_Chamb.M_r"/>
+          <output id="Heat_exchanger_1.h.T"/>
+          <output id="ThrustMonitor_1.M_out"/>
+        </parameters>
+      </global>
+    </parametric_steady>
+  </case>
+  <case id="LE9" noplotted="no" description="description case" run="no" type="standard case">
+    <steady id="design" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="1"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Comb_Chamb.OF" alias="" value="5.8"/>
+          <variable id="Comb_Chamb.f_O.p_c" alias="" value="3.67e6*3"/>
+          <variable id="FlowMeter_LOX.f_in.W" alias="" value="26*3"/>
+          <variable id="Heat_exchanger_1.f_in.W" alias="" value="3*3"/>
+          <variable id="Inlet_LH2.Tt" alias="" value="21"/>
+          <variable id="Inlet_LH2.pt" alias="" value="0.3e6"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="0.5e6"/>
+          <variable id="LPRES.Altitude" alias="" value="100e3"/>
+          <variable id="Pump_FUEL_LH2.dp" alias="" value="6e6*3"/>
+          <variable id="Pump_FUEL_LH2.phi" alias="" value="Pump_FUEL_LH2.phi_d"/>
+          <variable id="Pump_LOX_OXIDIZER.dp" alias="" value="6.5e6*3"/>
+          <variable id="Pump_LOX_OXIDIZER.phi" alias="" value="Pump_LOX_OXIDIZER.phi_d"/>
+          <variable id="Turbine_FUEL.f_in.Tt" alias="" value="140"/>
+          <variable id="Turbine_FUEL.rpm" alias="" value="52100"/>
+          <variable id="Turbine_OXIDIZER.rpm" alias="" value="17700"/>
+        </bounds>
+        <initial>
+          <variable id="Pump_FUEL_LH2.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Pump_LOX_OXIDIZER.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Comb_Chamb.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="10" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Heat_exchanger_1.h.T" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="200" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Pump_FUEL_LH2.psi" right="-Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Pump_LOX_OXIDIZER.psi" right="-Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / Comb_Chamb.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Comb_Chamb.AR_r" right="1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+</experiment>

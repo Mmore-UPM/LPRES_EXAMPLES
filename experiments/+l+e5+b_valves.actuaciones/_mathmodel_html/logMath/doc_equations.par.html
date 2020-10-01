@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.actuaciones.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.actuaciones.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Equations<br /></h2>
+Equations: 370<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>Turbine_FUEL.f_in.fluid[LOX] = 0<br/>
+<a name="e2">[E-2] </a>Heat_exchanger_1.fluid_out[NTO] = Inlet_LH2.fluidV[NTO]<br/>
+<a name="e3">[E-3] </a>Turbine_FUEL.f_in.fluid[NTO] = Heat_exchanger_1.fluid_out[NTO]<br/>
+<a name="e4">[E-4] </a>Heat_exchanger_1.fluid_out[H2O2] = Inlet_LH2.fluidV[H2O2]<br/>
+<a name="e5">[E-5] </a>Turbine_FUEL.f_in.fluid[H2O2] = Heat_exchanger_1.fluid_out[H2O2]<br/>
+<a name="e6">[E-6] </a>Heat_exchanger_1.fluid_out[NH3] = Inlet_LH2.fluidV[NH3]<br/>
+<a name="e7">[E-7] </a>Turbine_FUEL.f_in.fluid[NH3] = Heat_exchanger_1.fluid_out[NH3]<br/>
+<a name="e8">[E-8] </a>Heat_exchanger_1.fluid_out[HNO3] = Inlet_LH2.fluidV[HNO3]<br/>
+<a name="e9">[E-9] </a>Turbine_FUEL.f_in.fluid[HNO3] = Heat_exchanger_1.fluid_out[HNO3]<br/>
+<a name="e10">[E-10] </a>Heat_exchanger_1.fluid_out[LF2] = Inlet_LH2.fluidV[LF2]<br/>
+<a name="e11">[E-11] </a>Turbine_FUEL.f_in.fluid[LF2] = Heat_exchanger_1.fluid_out[LF2]<br/>
+<a name="e12">[E-12] </a>Heat_exchanger_1.fluid_out[RP_1] = Inlet_LH2.fluidV[RP_1]<br/>
+<a name="e13">[E-13] </a>Turbine_FUEL.f_in.fluid[RP_1] = Heat_exchanger_1.fluid_out[RP_1]<br/>
+<a name="e14">[E-14] </a>Turbine_FUEL.f_in.fluid[LCH4] = 0<br/>
+<a name="e15">[E-15] </a>Turbine_FUEL.f_in.fluid[LH2] = 0<br/>
+<a name="e16">[E-16] </a>Heat_exchanger_1.fluid_out[N2H4] = Inlet_LH2.fluidV[N2H4]<br/>
+<a name="e17">[E-17] </a>Turbine_FUEL.f_in.fluid[N2H4] = Heat_exchanger_1.fluid_out[N2H4]<br/>
+<a name="e18">[E-18] </a>Heat_exchanger_1.fluid_out[UDMH] = Inlet_LH2.fluidV[UDMH]<br/>
+<a name="e19">[E-19] </a>Turbine_FUEL.f_in.fluid[UDMH] = Heat_exchanger_1.fluid_out[UDMH]<br/>
+<a name="e20">[E-20] </a>Turbine_FUEL.f_in.fluid[MMH] = 0<br/>
+<a name="e21">[E-21] </a>Heat_exchanger_1.fluid_out[JP_10] = Inlet_LH2.fluidV[JP_10]<br/>
+<a name="e22">[E-22] </a>Turbine_FUEL.f_in.fluid[JP_10] = Heat_exchanger_1.fluid_out[JP_10]<br/>
+<a name="e23">[E-23] </a>Heat_exchanger_1.fluid_out[Kerox] = Inlet_LH2.fluidV[Kerox]<br/>
+<a name="e24">[E-24] </a>Turbine_FUEL.f_in.fluid[Kerox] = Heat_exchanger_1.fluid_out[Kerox]<br/>
+<a name="e25">[E-25] </a>Heat_exchanger_1.fluid_out[Oil] = Inlet_LH2.fluidV[Oil]<br/>
+<a name="e26">[E-26] </a>Turbine_FUEL.f_in.fluid[Oil] = Heat_exchanger_1.fluid_out[Oil]<br/>
+<a name="e27">[E-27] </a>Heat_exchanger_1.fluid_out[H2O] = Inlet_LH2.fluidV[H2O]<br/>
+<a name="e28">[E-28] </a>Turbine_FUEL.f_in.fluid[H2O] = Heat_exchanger_1.fluid_out[H2O]<br/>
+<a name="e29">[E-29] </a>Heat_exchanger_1.fluid_out[IPA] = Inlet_LH2.fluidV[IPA]<br/>
+<a name="e30">[E-30] </a>Turbine_FUEL.f_in.fluid[IPA] = Heat_exchanger_1.fluid_out[IPA]<br/>
+<a name="e31">[E-31] </a>Heat_exchanger_1.fluid_out[Air] = Inlet_LH2.fluidV[Air]<br/>
+<a name="e32">[E-32] </a>Turbine_FUEL.f_in.fluid[Air] = Heat_exchanger_1.fluid_out[Air]<br/>
+<a name="e33">[E-33] </a>Heat_exchanger_1.fluid_out[Ar] = Inlet_LH2.fluidV[Ar]<br/>
+<a name="e34">[E-34] </a>Turbine_FUEL.f_in.fluid[Ar] = Heat_exchanger_1.fluid_out[Ar]<br/>
+<a name="e35">[E-35] </a>Heat_exchanger_1.fluid_out[CH4] = Inlet_LH2.fluidV[LCH4]<br/>
+<a name="e36">[E-36] </a>Turbine_FUEL.f_in.fluid[CH4] = Heat_exchanger_1.fluid_out[CH4]<br/>
+<a name="e37">[E-37] </a>Heat_exchanger_1.fluid_out[CO] = Inlet_LH2.fluidV[CO]<br/>
+<a name="e38">[E-38] </a>Turbine_FUEL.f_in.fluid[CO] = Heat_exchanger_1.fluid_out[CO]<br/>
+<a name="e39">[E-39] </a>Heat_exchanger_1.fluid_out[CO2] = Inlet_LH2.fluidV[CO2]<br/>
+<a name="e40">[E-40] </a>Turbine_FUEL.f_in.fluid[CO2] = Heat_exchanger_1.fluid_out[CO2]<br/>
+<a name="e41">[E-41] </a>Heat_exchanger_1.fluid_out[H2] = Inlet_LH2.fluidV[LH2]<br/>
+<a name="e42">[E-42] </a>Turbine_FUEL.f_in.fluid[H2] = Heat_exchanger_1.fluid_out[H2]<br/>
+<a name="e43">[E-43] </a>Heat_exchanger_1.fluid_out[He] = Inlet_LH2.fluidV[He]<br/>
+<a name="e44">[E-44] </a>Turbine_FUEL.f_in.fluid[He] = Heat_exchanger_1.fluid_out[He]<br/>
+<a name="e45">[E-45] </a>Heat_exchanger_1.fluid_out[N2] = Inlet_LH2.fluidV[N2]<br/>
+<a name="e46">[E-46] </a>Turbine_FUEL.f_in.fluid[N2] = Heat_exchanger_1.fluid_out[N2]<br/>
+<a name="e47">[E-47] </a>Heat_exchanger_1.fluid_out[O2] = Inlet_LH2.fluidV[LOX]<br/>
+<a name="e48">[E-48] </a>Turbine_FUEL.f_in.fluid[O2] = Heat_exchanger_1.fluid_out[O2]<br/>
+<a name="e49">[E-49] </a>Heat_exchanger_1.fluid_out[MMH_vapour] = Inlet_LH2.fluidV[MMH]<br/>
+<a name="e50">[E-50] </a>Turbine_FUEL.f_in.fluid[MMH_vapour] = Heat_exchanger_1.fluid_out[MMH_vapour]<br/>
+<a name="e51">[E-51] </a>Heat_exchanger_1.fluid_out[H2O_vapour] = Inlet_LH2.fluidV[H2O_vapour]<br/>
+<a name="e52">[E-52] </a>Turbine_FUEL.f_in.fluid[H2O_vapour] = Heat_exchanger_1.fluid_out[H2O_vapour]<br/>
+<a name="e53">[E-53] </a>Heat_exchanger_1.fluid_out[Comb_prod] = Inlet_LH2.fluidV[Comb_prod]<br/>
+<a name="e54">[E-54] </a>Turbine_FUEL.f_in.fluid[Comb_prod] = Heat_exchanger_1.fluid_out[Comb_prod]<br/>
+<a name="e55">[E-55] </a>Heat_exchanger_1.fluid_out[Comb_prod_M] = Inlet_LH2.fluidV[Comb_prod_M]<br/>
+<a name="e56">[E-56] </a>Turbine_FUEL.f_in.fluid[Comb_prod_M] = Heat_exchanger_1.fluid_out[Comb_prod_M]<br/>
+<a name="e57">[E-57] </a>Heat_exchanger_1.fluid_out[Comb_prod_cp] = Inlet_LH2.fluidV[Comb_prod_cp]<br/>
+<a name="e58">[E-58] </a>Turbine_FUEL.f_in.fluid[Comb_prod_cp] = Heat_exchanger_1.fluid_out[Comb_prod_cp]<br/>
+<a name="e59">[E-59] </a>Heat_exchanger_1.fluid_out[Comb_prod_c] = Inlet_LH2.fluidV[Comb_prod_c]<br/>
+<a name="e60">[E-60] </a>Turbine_FUEL.f_in.fluid[Comb_prod_c] = Heat_exchanger_1.fluid_out[Comb_prod_c]<br/>
+<a name="e61">[E-61] </a>Heat_exchanger_1.fluid_out[Comb_prod_cp_g] = Inlet_LH2.fluidV[Comb_prod_cp_g]<br/>
+<a name="e62">[E-62] </a>Turbine_FUEL.f_in.fluid[Comb_prod_cp_g] = Heat_exchanger_1.fluid_out[Comb_prod_cp_g]<br/>
+<a name="e63">[E-63] </a>Heat_exchanger_1.fluid_out[Comb_prod_Lv] = Inlet_LH2.fluidV[Comb_prod_Lv]<br/>
+<a name="e64">[E-64] </a>Turbine_FUEL.f_in.fluid[Comb_prod_Lv] = Heat_exchanger_1.fluid_out[Comb_prod_Lv]<br/>
+<a name="e65">[E-65] </a>Turbine_FUEL.f_in.fluid[Comb_prod_visc] = Heat_exchanger_1.visc_P<br/>
+<a name="e66">[E-66] </a>Turbine_FUEL.f_in.fluid[Comb_prod_cond] = Heat_exchanger_1.cond_P<br/>
+<a name="e67">[E-67] </a>Heat_exchanger_1.fluid_out[Comb_prod_T_boil] = Inlet_LH2.fluidV[Comb_prod_T_boil]<br/>
+<a name="e68">[E-68] </a>Turbine_FUEL.f_in.fluid[Comb_prod_T_boil] = Heat_exchanger_1.fluid_out[Comb_prod_T_boil]<br/>
+<a name="e69">[E-69] </a>Turbine_FUEL.f_in.fluid[Comb_prod_rho] = Heat_exchanger_1.rho_P<br/>
+<a name="e70">[E-70] </a>Turbine_FUEL.MFP = Turbine_FUEL.A_in * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) / sqrt(LPRES.R(Turbine_FUEL.f_in.fluid))<br/>
+<a name="e71">[E-71] </a>CCV.rho_f = LPRES.rho(Inlet_LH2.fluidV)<br/>
+<a name="e72">[E-72] </a>LPRES.Obtain_Vap_Prop(Inlet_LH2.fluidV, Heat_exchanger_1.Cp_v, Heat_exchanger_1.Lv_v, Heat_exchanger_1.T_boil_v, Heat_exchanger_1.mass_frac_v)	{F@Heat_exchanger_1.Cp_v,Heat_exchanger_1.Lv_v,Heat_exchanger_1.T_boil_v,Heat_exchanger_1.mass_frac_v}<br/>
+<a name="e73">[E-73] </a>Heat_exchanger_1.D_hy = 2 * Heat_exchanger_1.a * Heat_exchanger_1.b / (Heat_exchanger_1.a + Heat_exchanger_1.b)<br/>
+<a name="e74">[E-74] </a>Heat_exchanger_1.Pr = LPRES.visc(Turbine_FUEL.f_in.fluid) * LPRES.cp(Turbine_FUEL.f_in.fluid) / LPRES.cond(Turbine_FUEL.f_in.fluid) + LPRES.visc(Inlet_LH2.fluidV) * LPRES.cp(Inlet_LH2.fluidV) / LPRES.cond(Inlet_LH2.fluidV)<br/>
+<a name="e75">[E-75] </a>Comb_Chamb.fluid_O[LOX] = Inlet_LOX.fluidV[LOX] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e76">[E-76] </a>Turbine_OXIDIZER.MFP = Turbine_OXIDIZER.A_in * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) / sqrt(LPRES.R(Turbine_FUEL.f_in.fluid))<br/>
+<a name="e77">[E-77] </a>Nozzle_1.p_amb = LPRES.ISA_Pressure(LPRES.Altitude)<br/>
+<a name="e78">[E-78] </a>Comb_Chamb.Q_comb_effective =  ZONE[1] (Comb_Chamb.Combustion) Comb_Chamb.Q_comb	  OTHERS 0<br/>
+<a name="e79">[E-79] </a>Comb_Chamb.fluid_O[NTO] = Inlet_LOX.fluidV[NTO] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e80">[E-80] </a>Comb_Chamb.fluid_O[H2O2] = Inlet_LOX.fluidV[H2O2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e81">[E-81] </a>Comb_Chamb.fluid_O[NH3] = Inlet_LOX.fluidV[NH3] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e82">[E-82] </a>Comb_Chamb.fluid_O[HNO3] = Inlet_LOX.fluidV[HNO3] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e83">[E-83] </a>Comb_Chamb.fluid_O[LF2] = Inlet_LOX.fluidV[LF2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e84">[E-84] </a>Comb_Chamb.fluid_O[RP_1] = Inlet_LOX.fluidV[RP_1] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e85">[E-85] </a>Comb_Chamb.fluid_O[LCH4] = Inlet_LOX.fluidV[LCH4] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e86">[E-86] </a>Comb_Chamb.fluid_O[LH2] = Inlet_LOX.fluidV[LH2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e87">[E-87] </a>Comb_Chamb.fluid_O[N2H4] = Inlet_LOX.fluidV[N2H4] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e88">[E-88] </a>Comb_Chamb.fluid_O[UDMH] = Inlet_LOX.fluidV[UDMH] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e89">[E-89] </a>Comb_Chamb.fluid_O[MMH] = Inlet_LOX.fluidV[MMH] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e90">[E-90] </a>Comb_Chamb.fluid_O[JP_10] = Inlet_LOX.fluidV[JP_10] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e91">[E-91] </a>Comb_Chamb.fluid_O[Kerox] = Inlet_LOX.fluidV[Kerox] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e92">[E-92] </a>Comb_Chamb.fluid_O[Oil] = Inlet_LOX.fluidV[Oil] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e93">[E-93] </a>Comb_Chamb.fluid_O[H2O] = Inlet_LOX.fluidV[H2O] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e94">[E-94] </a>Comb_Chamb.fluid_O[IPA] = Inlet_LOX.fluidV[IPA] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e95">[E-95] </a>Comb_Chamb.fluid_O[Air] = Inlet_LOX.fluidV[Air] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e96">[E-96] </a>Comb_Chamb.fluid_O[Ar] = Inlet_LOX.fluidV[Ar] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e97">[E-97] </a>Comb_Chamb.fluid_O[CH4] = Inlet_LOX.fluidV[CH4] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e98">[E-98] </a>Comb_Chamb.fluid_O[CO] = Inlet_LOX.fluidV[CO] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e99">[E-99] </a>Comb_Chamb.fluid_O[CO2] = Inlet_LOX.fluidV[CO2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e100">[E-100] </a>Comb_Chamb.fluid_O[H2] = Inlet_LOX.fluidV[H2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e101">[E-101] </a>Comb_Chamb.fluid_O[He] = Inlet_LOX.fluidV[He] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e102">[E-102] </a>Comb_Chamb.fluid_O[N2] = Inlet_LOX.fluidV[N2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e103">[E-103] </a>Comb_Chamb.fluid_O[O2] = Inlet_LOX.fluidV[O2] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e104">[E-104] </a>Comb_Chamb.fluid_O[MMH_vapour] = Inlet_LOX.fluidV[MMH_vapour] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e105">[E-105] </a>Comb_Chamb.fluid_O[H2O_vapour] = Inlet_LOX.fluidV[H2O_vapour] / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+<a name="e106">[E-106] </a>Comb_Chamb.fluid_O[Comb_prod] = 0<br/>
+<a name="e107">[E-107] </a>Comb_Chamb.fluid_O[Comb_prod_M] = 0<br/>
+<a name="e108">[E-108] </a>Comb_Chamb.fluid_O[Comb_prod_cp] = 0<br/>
+<a name="e109">[E-109] </a>Comb_Chamb.fluid_O[Comb_prod_c] = 0<br/>
+<a name="e110">[E-110] </a>Comb_Chamb.fluid_O[Comb_prod_cp_g] = 0<br/>
+<a name="e111">[E-111] </a>Comb_Chamb.fluid_O[Comb_prod_Lv] = 0<br/>
+<a name="e112">[E-112] </a>Comb_Chamb.fluid_O[Comb_prod_visc] = 0<br/>
+<a name="e113">[E-113] </a>Comb_Chamb.fluid_O[Comb_prod_cond] = 0<br/>
+<a name="e114">[E-114] </a>Comb_Chamb.fluid_O[Comb_prod_T_boil] = 0<br/>
+<a name="e115">[E-115] </a>Comb_Chamb.fluid_O[Comb_prod_rho] = 0<br/>
+<a name="e116">[E-116] </a>Comb_Chamb.fluid_F[LOX] = Inlet_LH2.fluidV[LOX] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e117">[E-117] </a>Comb_Chamb.fluid_F[NTO] = Inlet_LH2.fluidV[NTO] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e118">[E-118] </a>Comb_Chamb.fluid_F[H2O2] = Inlet_LH2.fluidV[H2O2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e119">[E-119] </a>Comb_Chamb.fluid_F[NH3] = Inlet_LH2.fluidV[NH3] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e120">[E-120] </a>Comb_Chamb.fluid_F[HNO3] = Inlet_LH2.fluidV[HNO3] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e121">[E-121] </a>Comb_Chamb.fluid_F[LF2] = Inlet_LH2.fluidV[LF2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e122">[E-122] </a>Comb_Chamb.fluid_F[RP_1] = Inlet_LH2.fluidV[RP_1] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e123">[E-123] </a>Comb_Chamb.fluid_F[LCH4] = Inlet_LH2.fluidV[LCH4] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e124">[E-124] </a>Comb_Chamb.fluid_F[LH2] = Inlet_LH2.fluidV[LH2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e125">[E-125] </a>Comb_Chamb.fluid_F[N2H4] = Inlet_LH2.fluidV[N2H4] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e126">[E-126] </a>Comb_Chamb.fluid_F[UDMH] = Inlet_LH2.fluidV[UDMH] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e127">[E-127] </a>Comb_Chamb.fluid_F[MMH] = Inlet_LH2.fluidV[MMH] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e128">[E-128] </a>Comb_Chamb.fluid_F[JP_10] = Inlet_LH2.fluidV[JP_10] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e129">[E-129] </a>Comb_Chamb.fluid_F[Kerox] = Inlet_LH2.fluidV[Kerox] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e130">[E-130] </a>Comb_Chamb.fluid_F[Oil] = Inlet_LH2.fluidV[Oil] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e131">[E-131] </a>Comb_Chamb.fluid_F[H2O] = Inlet_LH2.fluidV[H2O] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e132">[E-132] </a>Comb_Chamb.fluid_F[IPA] = Inlet_LH2.fluidV[IPA] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e133">[E-133] </a>Comb_Chamb.fluid_F[Air] = Inlet_LH2.fluidV[Air] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e134">[E-134] </a>Comb_Chamb.fluid_F[Ar] = Inlet_LH2.fluidV[Ar] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e135">[E-135] </a>Comb_Chamb.fluid_F[CH4] = Inlet_LH2.fluidV[CH4] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e136">[E-136] </a>Comb_Chamb.fluid_F[CO] = Inlet_LH2.fluidV[CO] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e137">[E-137] </a>Comb_Chamb.fluid_F[CO2] = Inlet_LH2.fluidV[CO2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e138">[E-138] </a>Comb_Chamb.fluid_F[H2] = Inlet_LH2.fluidV[H2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e139">[E-139] </a>Comb_Chamb.fluid_F[He] = Inlet_LH2.fluidV[He] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e140">[E-140] </a>Comb_Chamb.fluid_F[N2] = Inlet_LH2.fluidV[N2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e141">[E-141] </a>Comb_Chamb.fluid_F[O2] = Inlet_LH2.fluidV[O2] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e142">[E-142] </a>Comb_Chamb.fluid_F[MMH_vapour] = Inlet_LH2.fluidV[MMH_vapour] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e143">[E-143] </a>Comb_Chamb.fluid_F[H2O_vapour] = Inlet_LH2.fluidV[H2O_vapour] / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+<a name="e144">[E-144] </a>Comb_Chamb.fluid_F[Comb_prod] = 0<br/>
+<a name="e145">[E-145] </a>Comb_Chamb.fluid_F[Comb_prod_M] = 0<br/>
+<a name="e146">[E-146] </a>Comb_Chamb.fluid_F[Comb_prod_cp] = 0<br/>
+<a name="e147">[E-147] </a>Comb_Chamb.fluid_F[Comb_prod_c] = 0<br/>
+<a name="e148">[E-148] </a>Comb_Chamb.fluid_F[Comb_prod_cp_g] = 0<br/>
+<a name="e149">[E-149] </a>Comb_Chamb.fluid_F[Comb_prod_Lv] = 0<br/>
+<a name="e150">[E-150] </a>Comb_Chamb.fluid_F[Comb_prod_visc] = 0<br/>
+<a name="e151">[E-151] </a>Comb_Chamb.fluid_F[Comb_prod_cond] = 0<br/>
+<a name="e152">[E-152] </a>Comb_Chamb.fluid_F[Comb_prod_T_boil] = 0<br/>
+<a name="e153">[E-153] </a>Comb_Chamb.fluid_F[Comb_prod_rho] = 0<br/>
+<a name="e154">[E-154] </a>MOV.rho_f = LPRES.rho(Inlet_LOX.fluidV)<br/>
+<a name="e155">[E-155] </a>Comb_Chamb.fluid_P[Comb_prod_M] =  IF[30] (Comb_Chamb.Combustion) Comb_Chamb.M_P	 ELSE 0<br/>
+<a name="e156">[E-156] </a>Comb_Chamb.fluid_P[Comb_prod_cp] =  IF[31] (Comb_Chamb.Combustion) Comb_Chamb.cp_P	 ELSE 0<br/>
+<a name="e157">[E-157] </a>Comb_Chamb.fluid_P[Comb_prod_c] =  IF[32] (Comb_Chamb.Combustion) Comb_Chamb.c_P	 ELSE 0<br/>
+<a name="e158">[E-158] </a>Comb_Chamb.fluid_P[Comb_prod_cp_g] =  IF[33] (Comb_Chamb.Combustion) Comb_Chamb.cp_P	 ELSE 0<br/>
+<a name="e159">[E-159] </a>Comb_Chamb.fluid_P[Comb_prod_Lv] =  IF[34] (Comb_Chamb.Combustion) Comb_Chamb.Lv_P	 ELSE 0<br/>
+<a name="e160">[E-160] </a>Comb_Chamb.fluid_P[Comb_prod_visc] =  IF[35] (Comb_Chamb.Combustion) Comb_Chamb.visc_P	 ELSE 0<br/>
+<a name="e161">[E-161] </a>Comb_Chamb.fluid_P[Comb_prod_cond] =  IF[36] (Comb_Chamb.Combustion) Comb_Chamb.cond_P	 ELSE 0<br/>
+<a name="e162">[E-162] </a>Comb_Chamb.fluid_P[Comb_prod_T_boil] =  IF[37] (Comb_Chamb.Combustion) Comb_Chamb.T_boil_P	 ELSE 0<br/>
+<a name="e163">[E-163] </a>Comb_Chamb.fluid_P[Comb_prod_rho] = 0<br/>
+<a name="e164">[E-164] </a>Comb_Chamb.A_r = Comb_Chamb.A_th * Comb_Chamb.AR_r<br/>
+<a name="e165">[E-165] </a>Contact_Wall_1.A_wet = Comb_Chamb.A_wet / Contact_Wall_1.A_eff_1<br/>
+<a name="e166">[E-166] </a>Heat_exchanger_1.h.A = Contact_Wall_1.A_eff_2 * Contact_Wall_1.A_wet<br/>
+<a name="e167">[E-167] </a>MFV.rho_f = LPRES.rho(Inlet_LH2.fluidV)<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v24" data-ajax='false'>Comb_Chamb.M_r</a>&nbsp;</td><td><a href="doc_vars.par.html#v24" data-ajax='false'></a>&nbsp;</td><td>-&nbsp;</td><td>Mach number at the characteristic section of heat exchange&nbsp;</td><td>&nbsp;</td><td>[E-247] Comb_Chamb.AR_r = 1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td><a href="doc_vars.par.html#v34" data-ajax='false'>Comb_Chamb.W_F</a>&nbsp;</td><td><a href="doc_vars.par.html#v34" data-ajax='false'></a>&nbsp;</td><td>kg/s&nbsp;</td><td>Fuel mass flow&nbsp;</td><td>&nbsp;</td><td>[E-285] Turbine_OXIDIZER.MFP = CCV.f_in.W * sqrt(Turbine_OXIDIZER.f_in.Tt) / Turbine_OXIDIZER.f_in.pt&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td><a href="doc_vars.par.html#v77" data-ajax='false'>Comb_Chamb.phi</a>&nbsp;</td><td><a href="doc_vars.par.html#v77" data-ajax='false'></a>&nbsp;</td><td>-&nbsp;</td><td>Equivalence ratio&nbsp;</td><td>1&nbsp;</td><td>[E-293] CCV.f_in.W = Nozzle_1.A_sl * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) * Nozzle_1.g.pt / sqrt(Nozzle_1.g.Tt * LPRES.R(Turbine_FUEL.f_in.fluid))&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td><a href="doc_vars.par.html#v294" data-ajax='false'>Pump_FUEL_LH2.tau_id</a>&nbsp;</td><td><a href="doc_vars.par.html#v294" data-ajax='false'></a>&nbsp;</td><td>J/kg&nbsp;</td><td>Ideal specific work&nbsp;</td><td>&nbsp;</td><td>[E-297] (Comb_Chamb.W_O + Comb_Chamb.W_F) * Comb_Chamb.fluid_P_decomp[CombProd] / ThrustMonitor_1.g.W * Comb_Chamb.fluid_P_decomp[CombProd_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.T_c) + Comb_Chamb.W_IO / ThrustMonitor_1.g.W * Inlet_LOX.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - FlowMeter_LOX.f_in.Tt) + Comb_Chamb.W_IF / ThrustMonitor_1.g.W * Inlet_LH2.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.f_F.T) = 0&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td><a href="doc_vars.par.html#v385" data-ajax='false'>Turbine_OXIDIZER.tau</a>&nbsp;</td><td><a href="doc_vars.par.html#v385" data-ajax='false'></a>&nbsp;</td><td>J/kg&nbsp;</td><td>Specific work&nbsp;</td><td>&nbsp;</td><td>[E-303] Contact_Wall_1.Q = -Heat_exchanger_1.h.Q&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e168">[E-168] </a>Comb_Chamb.f_F.W = Comb_Chamb.W_F / (1 - Inlet_LH2.fluidV[Comb_prod])<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e169">[E-169] </a>Comb_Chamb.W_IF = Comb_Chamb.f_F.W - Comb_Chamb.W_F<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e170">[E-170] </a>Comb_Chamb.W_F_st = Comb_Chamb.W_F / Comb_Chamb.phi<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e171">[E-171] </a>Comb_Chamb.OF = Comb_Chamb.OF_st / Comb_Chamb.phi<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e172">[E-172] </a>Comb_Chamb.W_O = Comb_Chamb.OF * Comb_Chamb.W_F<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e173">[E-173] </a>FlowMeter_LOX.f_in.W = Comb_Chamb.W_O / (1 - Inlet_LOX.fluidV[Comb_prod])<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e174">[E-174] </a>Comb_Chamb.W_IO = FlowMeter_LOX.f_in.W - Comb_Chamb.W_O<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e175">[E-175] </a>ThrustMonitor_1.g.W = Comb_Chamb.W_IO + Comb_Chamb.W_O + Comb_Chamb.W_F + Comb_Chamb.W_IF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e176">[E-176] </a>Comb_Chamb.cp_R = (Comb_Chamb.W_O * LPRES.cp(Comb_Chamb.fluid_O) + Comb_Chamb.W_F * LPRES.cp(Comb_Chamb.fluid_F)) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e177">[E-177] </a>Comb_Chamb.fluid_P[LOX] =  IF[1] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[LOX] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LOX] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[LOX] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LOX] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e178">[E-178] </a>Comb_Chamb.fluid_P[NTO] =  IF[2] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[NTO] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[NTO] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[NTO] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[NTO] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e179">[E-179] </a>Comb_Chamb.fluid_P[H2O2] =  IF[3] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[H2O2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[H2O2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e180">[E-180] </a>Comb_Chamb.fluid_P[HNO3] =  IF[4] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[HNO3] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[HNO3] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[HNO3] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[HNO3] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e181">[E-181] </a>Comb_Chamb.fluid_P[LF2] =  IF[5] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[LF2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LF2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[LF2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LF2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e182">[E-182] </a>Comb_Chamb.fluid_P[RP_1] =  IF[6] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[RP_1] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[RP_1] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[RP_1] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[RP_1] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e183">[E-183] </a>Comb_Chamb.fluid_P[LCH4] =  IF[7] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[LCH4] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LCH4] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[LCH4] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LCH4] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e184">[E-184] </a>Comb_Chamb.fluid_P[LH2] =  IF[8] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[LH2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LH2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[LH2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[LH2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e185">[E-185] </a>Comb_Chamb.fluid_P[N2H4] =  IF[9] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[N2H4] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[N2H4] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[N2H4] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[N2H4] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e186">[E-186] </a>Comb_Chamb.fluid_P[UDMH] =  IF[10] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[UDMH] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[UDMH] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[UDMH] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[UDMH] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e187">[E-187] </a>Comb_Chamb.fluid_P[MMH] =  IF[11] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[MMH] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[MMH] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[MMH] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[MMH] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e188">[E-188] </a>Comb_Chamb.fluid_P[JP_10] =  IF[12] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[JP_10] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[JP_10] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[JP_10] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[JP_10] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e189">[E-189] </a>Comb_Chamb.fluid_P[Kerox] =  IF[13] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[Kerox] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Kerox] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[Kerox] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Kerox] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e190">[E-190] </a>Comb_Chamb.fluid_P[Oil] =  IF[14] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[Oil] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Oil] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[Oil] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Oil] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e191">[E-191] </a>Comb_Chamb.fluid_P[H2O] =  IF[15] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[H2O] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[H2O] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e192">[E-192] </a>Comb_Chamb.fluid_P[IPA] =  IF[16] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[IPA] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[IPA] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[IPA] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[IPA] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e193">[E-193] </a>Comb_Chamb.fluid_P[Air] =  IF[17] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[Air] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Air] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[Air] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Air] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e194">[E-194] </a>Comb_Chamb.fluid_P[Ar] =  IF[18] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[Ar] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Ar] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[Ar] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Ar] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e195">[E-195] </a>Comb_Chamb.fluid_P[CH4] =  IF[19] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[CH4] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CH4] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[CH4] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CH4] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e196">[E-196] </a>Comb_Chamb.fluid_P[CO] =  IF[20] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[CO] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CO] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[CO] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CO] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e197">[E-197] </a>Comb_Chamb.fluid_P[CO2] =  IF[21] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[CO2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CO2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[CO2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[CO2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e198">[E-198] </a>Comb_Chamb.fluid_P[H2] =  IF[22] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[H2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[H2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e199">[E-199] </a>Comb_Chamb.fluid_P[He] =  IF[23] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[He] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[He] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[He] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[He] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e200">[E-200] </a>Comb_Chamb.fluid_P[N2] =  IF[24] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[N2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[N2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[N2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[N2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e201">[E-201] </a>Comb_Chamb.fluid_P[O2] =  IF[25] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[O2] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[O2] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[O2] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[O2] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e202">[E-202] </a>Comb_Chamb.fluid_P[MMH_vapour] =  IF[26] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[MMH_vapour] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[MMH_vapour] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[MMH_vapour] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[MMH_vapour] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e203">[E-203] </a>Comb_Chamb.fluid_P[NH3] =  IF[27] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[NH3] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[NH3] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[NH3] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[NH3] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e204">[E-204] </a>Comb_Chamb.fluid_P[H2O_vapour] =  IF[28] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[H2O_vapour] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O_vapour] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE (Comb_Chamb.fluid_O[H2O_vapour] * Comb_Chamb.W_O + Comb_Chamb.fluid_F[H2O_vapour] * Comb_Chamb.W_F) / (Comb_Chamb.W_O + Comb_Chamb.W_F)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e205">[E-205] </a>Comb_Chamb.fluid_P[Comb_prod] =  IF[29] (Comb_Chamb.Combustion) (Comb_Chamb.fluid_O[Comb_prod] * MATH.max(1 - Comb_Chamb.phi, 0) * Comb_Chamb.W_O + Comb_Chamb.fluid_F[Comb_prod] * MATH.max(Comb_Chamb.phi - 1, 0) * Comb_Chamb.W_F_st + (1 - MATH.max(1 - Comb_Chamb.phi, 0)) * (Comb_Chamb.W_O + Comb_Chamb.W_F_st)) / (Comb_Chamb.W_O + Comb_Chamb.W_F)	 ELSE 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e206">[E-206] </a>LPRES.Vaporisation_mix(Comb_Chamb.fluid_P, Comb_Chamb.fluid_P_vap)	{F@Comb_Chamb.fluid_P_vap}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e207">[E-207] </a>LPRES.Decomposition_fun(Comb_Chamb.fluid_P_vap, Comb_Chamb.fluid_P_decomp)	{F@Comb_Chamb.fluid_P_decomp}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e208">[E-208] </a>ThrustMonitor_1.g.fluid[LOX] = Comb_Chamb.fluid_P_vap[LOX] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e209">[E-209] </a>ThrustMonitor_1.g.fluid[NTO] = Comb_Chamb.fluid_P_vap[NTO] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e210">[E-210] </a>ThrustMonitor_1.g.fluid[H2O2] = Comb_Chamb.fluid_P_vap[H2O2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e211">[E-211] </a>ThrustMonitor_1.g.fluid[NH3] = Comb_Chamb.fluid_P_vap[NH3] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e212">[E-212] </a>ThrustMonitor_1.g.fluid[HNO3] = Comb_Chamb.fluid_P_vap[HNO3] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e213">[E-213] </a>ThrustMonitor_1.g.fluid[LF2] = Comb_Chamb.fluid_P_vap[LF2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e214">[E-214] </a>ThrustMonitor_1.g.fluid[RP_1] = Comb_Chamb.fluid_P_vap[RP_1] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e215">[E-215] </a>ThrustMonitor_1.g.fluid[LCH4] = Comb_Chamb.fluid_P_vap[LCH4] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e216">[E-216] </a>ThrustMonitor_1.g.fluid[LH2] = Comb_Chamb.fluid_P_vap[LH2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e217">[E-217] </a>ThrustMonitor_1.g.fluid[N2H4] = Comb_Chamb.fluid_P_vap[N2H4] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e218">[E-218] </a>ThrustMonitor_1.g.fluid[UDMH] = Comb_Chamb.fluid_P_vap[UDMH] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e219">[E-219] </a>ThrustMonitor_1.g.fluid[MMH] = Comb_Chamb.fluid_P_vap[MMH] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e220">[E-220] </a>ThrustMonitor_1.g.fluid[JP_10] = Comb_Chamb.fluid_P_vap[JP_10] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e221">[E-221] </a>ThrustMonitor_1.g.fluid[Kerox] = Comb_Chamb.fluid_P_vap[Kerox] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e222">[E-222] </a>ThrustMonitor_1.g.fluid[Oil] = Comb_Chamb.fluid_P_vap[Oil] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e223">[E-223] </a>ThrustMonitor_1.g.fluid[H2O] = Comb_Chamb.fluid_P_vap[H2O] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e224">[E-224] </a>ThrustMonitor_1.g.fluid[IPA] = Comb_Chamb.fluid_P_vap[IPA] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e225">[E-225] </a>ThrustMonitor_1.g.fluid[Air] = Comb_Chamb.fluid_P_vap[Air] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e226">[E-226] </a>ThrustMonitor_1.g.fluid[Ar] = Comb_Chamb.fluid_P_vap[Ar] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e227">[E-227] </a>ThrustMonitor_1.g.fluid[CH4] = Comb_Chamb.fluid_P_vap[CH4] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e228">[E-228] </a>ThrustMonitor_1.g.fluid[CO] = Comb_Chamb.fluid_P_vap[CO] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e229">[E-229] </a>ThrustMonitor_1.g.fluid[CO2] = Comb_Chamb.fluid_P_vap[CO2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e230">[E-230] </a>ThrustMonitor_1.g.fluid[H2] = Comb_Chamb.fluid_P_vap[H2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e231">[E-231] </a>ThrustMonitor_1.g.fluid[He] = Comb_Chamb.fluid_P_vap[He] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e232">[E-232] </a>ThrustMonitor_1.g.fluid[N2] = Comb_Chamb.fluid_P_vap[N2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e233">[E-233] </a>ThrustMonitor_1.g.fluid[O2] = Comb_Chamb.fluid_P_vap[O2] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e234">[E-234] </a>ThrustMonitor_1.g.fluid[MMH_vapour] = Comb_Chamb.fluid_P_vap[MMH_vapour] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e235">[E-235] </a>ThrustMonitor_1.g.fluid[H2O_vapour] = Comb_Chamb.fluid_P_vap[H2O_vapour] * (Comb_Chamb.W_O + Comb_Chamb.W_F) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e236">[E-236] </a>ThrustMonitor_1.g.fluid[Comb_prod] = (Comb_Chamb.fluid_P_vap[Comb_prod] * (Comb_Chamb.W_O + Comb_Chamb.W_F) + Comb_Chamb.W_IO + Comb_Chamb.W_IF) / ThrustMonitor_1.g.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e237">[E-237] </a>ThrustMonitor_1.g.fluid[Comb_prod_M] = Comb_Chamb.fluid_P_vap[Comb_prod_M]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e238">[E-238] </a>ThrustMonitor_1.g.fluid[Comb_prod_cp] = Comb_Chamb.fluid_P_vap[Comb_prod_cp]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e239">[E-239] </a>ThrustMonitor_1.g.fluid[Comb_prod_c] = Comb_Chamb.fluid_P_vap[Comb_prod_c]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e240">[E-240] </a>ThrustMonitor_1.g.fluid[Comb_prod_cp_g] = Comb_Chamb.fluid_P_vap[Comb_prod_cp_g]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e241">[E-241] </a>ThrustMonitor_1.g.fluid[Comb_prod_Lv] = Comb_Chamb.fluid_P_vap[Comb_prod_Lv]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e242">[E-242] </a>ThrustMonitor_1.g.fluid[Comb_prod_visc] = Comb_Chamb.fluid_P_vap[Comb_prod_visc]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e243">[E-243] </a>ThrustMonitor_1.g.fluid[Comb_prod_cond] = Comb_Chamb.fluid_P_vap[Comb_prod_cond]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e244">[E-244] </a>ThrustMonitor_1.g.fluid[Comb_prod_T_boil] = Comb_Chamb.fluid_P_vap[Comb_prod_T_boil]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e245">[E-245] </a>ThrustMonitor_1.g.fluid[Comb_prod_rho] = Comb_Chamb.fluid_P_vap[Comb_prod_rho]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e246">[E-246] </a>Comb_Chamb.Pr_r = 4 * LPRES.gamma(ThrustMonitor_1.g.fluid) / (9 * LPRES.gamma(ThrustMonitor_1.g.fluid) - 5)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e247">[E-247] </a>Comb_Chamb.AR_r = 1 / Comb_Chamb.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))	{I@Comb_Chamb.M_r}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e248">[E-248] </a>Pump_FUEL_LH2.dp = -(Pump_FUEL_LH2.tau_id * LPRES.rho(Inlet_LH2.fluidV))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e249">[E-249] </a>FlowMeter_LH2.f_in.pt = Inlet_LH2.pt + Pump_FUEL_LH2.dp<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e250">[E-250] </a>CCV.f_in.pt = FlowMeter_LH2.f_in.pt * SplitFrac_1.TPL<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e251">[E-251] </a>MFV.f_in.pt = FlowMeter_LH2.f_in.pt * SplitFrac_1.TPL<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e252">[E-252] </a>Injector_FUEL.f_in.pt = MFV.f_in.pt - 0.5 * Comb_Chamb.f_F.W ** 2 / (MFV.rho_f * MFV.A ** 2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e253">[E-253] </a>Comb_Chamb.f_O.p_c = Injector_FUEL.f_in.pt - (Comb_Chamb.f_F.W / (Injector_FUEL.A * Injector_FUEL.C_D)) ** 2 / (2 * LPRES.rho(Inlet_LH2.fluidV))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e254">[E-254] </a>FlowMeter_LOX.f_in.pt = (FlowMeter_LOX.f_in.W / (Injector_OXIDIZER.A * Injector_OXIDIZER.C_D)) ** 2 / (2 * LPRES.rho(Inlet_LOX.fluidV)) + Comb_Chamb.f_O.p_c<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e255">[E-255] </a>MOV.f_in.pt = FlowMeter_LOX.f_in.pt + 0.5 * FlowMeter_LOX.f_in.W ** 2 / (MOV.rho_f * MOV.A ** 2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e256">[E-256] </a>MOV.dp = MOV.f_in.pt - FlowMeter_LOX.f_in.pt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e257">[E-257] </a>Pump_LOX_OXIDIZER.dp = FlowMeter_LOX.f_in.pt + MOV.dp - Inlet_LOX.pt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e258">[E-258] </a>Pump_LOX_OXIDIZER.tau_id = -Pump_LOX_OXIDIZER.dp / LPRES.rho(Inlet_LOX.fluidV)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e259">[E-259] </a>Pump_LOX_OXIDIZER.tau = Pump_LOX_OXIDIZER.tau_id / Pump_LOX_OXIDIZER.eta_d<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e260">[E-260] </a>Pump_LOX_OXIDIZER.m.Power = FlowMeter_LOX.f_in.W * Pump_LOX_OXIDIZER.tau<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e261">[E-261] </a>Turbine_OXIDIZER.m.Power = -Pump_LOX_OXIDIZER.m.Power<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e262">[E-262] </a>CCV.f_in.W = Turbine_OXIDIZER.m.Power / Turbine_OXIDIZER.tau<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e263">[E-263] </a>FlowMeter_LH2.f_in.W = CCV.f_in.W + Comb_Chamb.W_F + Comb_Chamb.W_IF<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e264">[E-264] </a>Heat_exchanger_1.v = CCV.f_in.W / (Heat_exchanger_1.a * Heat_exchanger_1.b * LPRES.rho(Inlet_LH2.fluidV)) / Heat_exchanger_1.N<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e265">[E-265] </a>Heat_exchanger_1.f_in.pt = CCV.f_in.pt - 0.5 * CCV.f_in.W ** 2 / (CCV.rho_f * CCV.A ** 2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e266">[E-266] </a>Turbine_FUEL.f_in.pt = Heat_exchanger_1.f_in.pt - Heat_exchanger_1.dp<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e267">[E-267] </a>Turbine_FUEL.f_in.Tt = (Turbine_FUEL.MFP * Turbine_FUEL.f_in.pt / CCV.f_in.W) ** 2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e268">[E-268] </a>Heat_exchanger_1.Re = Turbine_FUEL.f_in.pt / (LPRES.R(Turbine_FUEL.f_in.fluid) * Turbine_FUEL.f_in.Tt) * Heat_exchanger_1.v * Heat_exchanger_1.D_hy / LPRES.visc(Turbine_FUEL.f_in.fluid) + LPRES.rho(Inlet_LH2.fluidV) * Heat_exchanger_1.v * Heat_exchanger_1.D_hy / LPRES.visc(Inlet_LH2.fluidV)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e269">[E-269] </a>Heat_exchanger_1.Nu = 0.027 * Heat_exchanger_1.Re ** 0.8 * Heat_exchanger_1.Pr ** 0.33<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e270">[E-270] </a>Heat_exchanger_1.h_l = Heat_exchanger_1.Nu * LPRES.cond(Inlet_LH2.fluidV) / Heat_exchanger_1.D_hy<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e271">[E-271] </a>FlowMeter_LOX.f_in.Tt = (Pump_LOX_OXIDIZER.tau_id - Pump_LOX_OXIDIZER.tau) / LPRES.cp(Inlet_LOX.fluidV) + Inlet_LOX.Tt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e272">[E-272] </a>ThrustMonitor_1.g.Tt = (Comb_Chamb.f_O.p_c * Comb_Chamb.A_th * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ThrustMonitor_1.g.W) ** 2 / LPRES.R(ThrustMonitor_1.g.fluid)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e273">[E-273] </a>ThrustMonitor_1.g.c_star = sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / LPRES.FGAMMA(ThrustMonitor_1.g.fluid)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e274">[E-274] </a>Comb_Chamb.T_aw = ThrustMonitor_1.g.Tt * (1 + Comb_Chamb.Pr_r ** 0.33 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2) / (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * Comb_Chamb.M_r ** 2 / 2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e275">[E-275] </a>Comb_Chamb.visc_r = 1.184e-07 * LPRES.M(ThrustMonitor_1.g.fluid) ** 0.5 * Comb_Chamb.T_aw ** 0.6<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e276">[E-276] </a>Comb_Chamb.h_g = 0.026 / sqrt(4 * Comb_Chamb.A_th / 3.14159265358979) ** 0.2 * Comb_Chamb.visc_r ** 0.2 * LPRES.cp(ThrustMonitor_1.g.fluid) / Comb_Chamb.Pr_r ** 0.6 * (Comb_Chamb.f_O.p_c / ThrustMonitor_1.g.c_star) ** 0.8 * (Comb_Chamb.A_th / Comb_Chamb.A_r) ** 0.9<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e277">[E-277] </a>Pump_FUEL_LH2.tau = Pump_FUEL_LH2.tau_id / Pump_FUEL_LH2.eta_d<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e278">[E-278] </a>Pump_FUEL_LH2.m.Power = FlowMeter_LH2.f_in.W * Pump_FUEL_LH2.tau<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e279">[E-279] </a>Turbine_FUEL.m.Power = -Pump_FUEL_LH2.m.Power<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e280">[E-280] </a>Turbine_FUEL.tau = Turbine_FUEL.m.Power / CCV.f_in.W<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e281">[E-281] </a>Turbine_OXIDIZER.f_in.Tt = Turbine_FUEL.f_in.Tt - Turbine_FUEL.tau / LPRES.cp(Turbine_FUEL.f_in.fluid)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e282">[E-282] </a>Turbine_FUEL.alpha = Turbine_OXIDIZER.f_in.Tt / Turbine_FUEL.f_in.Tt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e283">[E-283] </a>Turbine_FUEL.beta = (1 - (1 - Turbine_FUEL.alpha) / Turbine_FUEL.eta_d) ** (1 / ((LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) / LPRES.gamma(Turbine_FUEL.f_in.fluid)))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e284">[E-284] </a>Turbine_OXIDIZER.f_in.pt = Turbine_FUEL.beta * Turbine_FUEL.f_in.pt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e285">[E-285] </a>Turbine_OXIDIZER.MFP = CCV.f_in.W * sqrt(Turbine_OXIDIZER.f_in.Tt) / Turbine_OXIDIZER.f_in.pt	{I@Comb_Chamb.W_F}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e286">[E-286] </a>Nozzle_1.g.Tt = Turbine_OXIDIZER.f_in.Tt - Turbine_OXIDIZER.tau / LPRES.cp(Turbine_FUEL.f_in.fluid)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e287">[E-287] </a>Turbine_OXIDIZER.alpha = Nozzle_1.g.Tt / Turbine_OXIDIZER.f_in.Tt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e288">[E-288] </a>Turbine_OXIDIZER.beta = (1 - (1 - Turbine_OXIDIZER.alpha) / Turbine_OXIDIZER.eta_d) ** (1 / ((LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) / LPRES.gamma(Turbine_FUEL.f_in.fluid)))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e289">[E-289] </a>Nozzle_1.g.pt = Turbine_OXIDIZER.beta * Turbine_OXIDIZER.f_in.pt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e290">[E-290] </a>Nozzle_1.PR = Nozzle_1.g.pt / Nozzle_1.p_amb<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e291">[E-291] </a>Nozzle_1.M_out =  ZONE[3] (Nozzle_1.PR < Nozzle_1.PR_sl) sqrt(2 * (Nozzle_1.PR ** ((LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) / LPRES.gamma(Turbine_FUEL.f_in.fluid)) - 1) / (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1))	  OTHERS 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e292">[E-292] </a>Nozzle_1.A_sl =  ZONE[2] (Nozzle_1.M_out > 0) Nozzle_1.A * Nozzle_1.M_out / ((2 + (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) * Nozzle_1.M_out ** 2) / (LPRES.gamma(Turbine_FUEL.f_in.fluid) + 1)) ** ((LPRES.gamma(Turbine_FUEL.f_in.fluid) + 1) / (2 * (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1)))	  OTHERS Nozzle_1.A * -Nozzle_1.M_out / ((2 + (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) * Nozzle_1.M_out ** 2) / (LPRES.gamma(Turbine_FUEL.f_in.fluid) + 1)) ** ((LPRES.gamma(Turbine_FUEL.f_in.fluid) + 1) / (2 * (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1)))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e293">[E-293] </a>CCV.f_in.W = Nozzle_1.A_sl * LPRES.FGAMMA(Turbine_FUEL.f_in.fluid) * Nozzle_1.g.pt / sqrt(Nozzle_1.g.Tt * LPRES.R(Turbine_FUEL.f_in.fluid))	{I@Comb_Chamb.phi}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e294">[E-294] </a>Comb_Chamb.f_F.T = (Pump_FUEL_LH2.tau_id - Pump_FUEL_LH2.tau) / LPRES.cp(Inlet_LH2.fluidV) + Inlet_LH2.Tt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e295">[E-295] </a>Comb_Chamb.T_in = (LPRES.cp(Comb_Chamb.fluid_O) * FlowMeter_LOX.f_in.Tt + Comb_Chamb.phi / Comb_Chamb.OF_st * LPRES.cp(Comb_Chamb.fluid_F) * Comb_Chamb.f_F.T) / ((1 + Comb_Chamb.phi / Comb_Chamb.OF_st) * Comb_Chamb.cp_R)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e296">[E-296] </a>Comb_Chamb.T_c = (Comb_Chamb.eta_d * Comb_Chamb.Q_comb_effective / ((1 + Comb_Chamb.OF) / MATH.min(Comb_Chamb.OF, Comb_Chamb.OF_st)) + Comb_Chamb.cp_R * (Comb_Chamb.T_in - 298.15)) / LPRES.cp(Comb_Chamb.fluid_P_vap) + 298.15<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e297">[E-297] </a>(Comb_Chamb.W_O + Comb_Chamb.W_F) * Comb_Chamb.fluid_P_decomp[CombProd] / ThrustMonitor_1.g.W * Comb_Chamb.fluid_P_decomp[CombProd_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.T_c) + Comb_Chamb.W_IO / ThrustMonitor_1.g.W * Inlet_LOX.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - FlowMeter_LOX.f_in.Tt) + Comb_Chamb.W_IF / ThrustMonitor_1.g.W * Inlet_LH2.fluidV[Comb_prod_cp] * (ThrustMonitor_1.g.Tt - Comb_Chamb.f_F.T) = 0	{I@Pump_FUEL_LH2.tau_id}<br/>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e298">[E-298] </a>Heat_exchanger_1.T_av = (Comb_Chamb.f_F.T + Turbine_FUEL.f_in.Tt) / 2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e299">[E-299] </a>Heat_exchanger_1.h.Q = CCV.f_in.W * (Heat_exchanger_1.mass_frac_v[01] * Heat_exchanger_1.Cp_v[01] * (Heat_exchanger_1.T_boil_v[01] - Comb_Chamb.f_F.T) + Heat_exchanger_1.mass_frac_v[01] * Heat_exchanger_1.Cp_v[02] * (Turbine_FUEL.f_in.Tt - Heat_exchanger_1.T_boil_v[01]) + Heat_exchanger_1.mass_frac_v[01] * Heat_exchanger_1.Lv_v[01] + Heat_exchanger_1.mass_frac_v[03] * Heat_exchanger_1.Cp_v[03] * (Heat_exchanger_1.T_boil_v[03] - Comb_Chamb.f_F.T) + Heat_exchanger_1.mass_frac_v[03] * Heat_exchanger_1.Cp_v[04] * (Turbine_FUEL.f_in.Tt - Heat_exchanger_1.T_boil_v[03]) + Heat_exchanger_1.mass_frac_v[03] * Heat_exchanger_1.Lv_v[03] + Heat_exchanger_1.mass_frac_v[05] * Heat_exchanger_1.Cp_v[05] * (Heat_exchanger_1.T_boil_v[05] - Comb_Chamb.f_F.T) + Heat_exchanger_1.mass_frac_v[05] * Heat_exchanger_1.Cp_v[06] * (Turbine_FUEL.f_in.Tt - Heat_exchanger_1.T_boil_v[05]) + Heat_exchanger_1.mass_frac_v[05] * Heat_exchanger_1.Lv_v[05] + Heat_exchanger_1.mass_frac_v[07] * Heat_exchanger_1.Cp_v[07] * (Heat_exchanger_1.T_boil_v[07] - Comb_Chamb.f_F.T) + Heat_exchanger_1.mass_frac_v[07] * Heat_exchanger_1.Cp_v[08] * (Turbine_FUEL.f_in.Tt - Heat_exchanger_1.T_boil_v[07]) + Heat_exchanger_1.mass_frac_v[07] * Heat_exchanger_1.Lv_v[07] + Heat_exchanger_1.mass_frac_v[09] * Heat_exchanger_1.Cp_v[09] * (Heat_exchanger_1.T_boil_v[09] - Comb_Chamb.f_F.T) + Heat_exchanger_1.mass_frac_v[09] * Heat_exchanger_1.Cp_v[10] * (Turbine_FUEL.f_in.Tt - Heat_exchanger_1.T_boil_v[09]) + Heat_exchanger_1.mass_frac_v[09] * Heat_exchanger_1.Lv_v[09])<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e300">[E-300] </a>Comb_Chamb.h.T = Comb_Chamb.T_aw - Heat_exchanger_1.h.Q / Comb_Chamb.A_wet / Comb_Chamb.h_g<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e301">[E-301] </a>Heat_exchanger_1.h.T = Heat_exchanger_1.h.Q / Heat_exchanger_1.h.A / Heat_exchanger_1.h_l + Heat_exchanger_1.T_av<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e302">[E-302] </a>Contact_Wall_1.Q = Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - Comb_Chamb.h.T) * Contact_Wall_1.A_wet<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e303">[E-303] </a>Contact_Wall_1.Q = -Heat_exchanger_1.h.Q	{I@Turbine_OXIDIZER.tau}<br/>
+</b><hr>END OF BOX 1<hr><br/>
+<hr>BOX 2 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v273" data-ajax='false'>Pump_FUEL_LH2.U</a>&nbsp;</td><td><a href="doc_vars.par.html#v273" data-ajax='false'></a>&nbsp;</td><td>m/s&nbsp;</td><td>Blade speed&nbsp;</td><td>500&nbsp;</td><td>[E-306] Pump_FUEL_LH2.psi = -Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e304">[E-304] </a>Pump_FUEL_LH2.phi = FlowMeter_LH2.f_in.W / LPRES.rho(Inlet_LH2.fluidV) / Pump_FUEL_LH2.U / Pump_FUEL_LH2.A_in<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e305">[E-305] </a>Pump_FUEL_LH2.psi = (Pump_FUEL_LH2.psi_d - 1) / Pump_FUEL_LH2.phi_d * Pump_FUEL_LH2.phi + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e306">[E-306] </a>Pump_FUEL_LH2.psi = -Pump_FUEL_LH2.tau / Pump_FUEL_LH2.U ** 2	{I@Pump_FUEL_LH2.U}<br/>
+</b><hr>END OF BOX 2<hr><a name="e307">[E-307] </a>Pump_FUEL_LH2.m.N = Pump_FUEL_LH2.U / Pump_FUEL_LH2.r_m<br/>
+<a name="e308">[E-308] </a>Turbine_FUEL.rpm = Pump_FUEL_LH2.m.N / 0.10471975511966<br/>
+<a name="e309">[E-309] </a>Turbine_FUEL.theta = 1 / Turbine_FUEL.alpha<br/>
+<a name="e310">[E-310] </a>Turbine_FUEL.pi = 1 / Turbine_FUEL.beta<br/>
+<br/>
+<hr>BOX 3 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v296" data-ajax='false'>Pump_LOX_OXIDIZER.U</a>&nbsp;</td><td><a href="doc_vars.par.html#v296" data-ajax='false'></a>&nbsp;</td><td>m/s&nbsp;</td><td>Blade speed&nbsp;</td><td>500&nbsp;</td><td>[E-313] Pump_LOX_OXIDIZER.psi = -Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e311">[E-311] </a>Pump_LOX_OXIDIZER.phi = FlowMeter_LOX.f_in.W / LPRES.rho(Inlet_LOX.fluidV) / Pump_LOX_OXIDIZER.U / Pump_LOX_OXIDIZER.A_in<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e312">[E-312] </a>Pump_LOX_OXIDIZER.psi = (Pump_LOX_OXIDIZER.psi_d - 1) / Pump_LOX_OXIDIZER.phi_d * Pump_LOX_OXIDIZER.phi + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e313">[E-313] </a>Pump_LOX_OXIDIZER.psi = -Pump_LOX_OXIDIZER.tau / Pump_LOX_OXIDIZER.U ** 2	{I@Pump_LOX_OXIDIZER.U}<br/>
+</b><hr>END OF BOX 3<hr><a name="e314">[E-314] </a>Pump_LOX_OXIDIZER.m.N = Pump_LOX_OXIDIZER.U / Pump_LOX_OXIDIZER.r_m<br/>
+<a name="e315">[E-315] </a>Turbine_OXIDIZER.rpm = Pump_LOX_OXIDIZER.m.N / 0.10471975511966<br/>
+<a name="e316">[E-316] </a>Turbine_OXIDIZER.theta = 1 / Turbine_OXIDIZER.alpha<br/>
+<a name="e317">[E-317] </a>Turbine_OXIDIZER.pi = 1 / Turbine_OXIDIZER.beta<br/>
+<a name="e318">[E-318] </a>FlowMeter_LH2.i.Data[1] = abs(FlowMeter_LH2.f_in.W)<br/>
+<a name="e319">[E-319] </a>Injector_FUEL.PR = Injector_FUEL.f_in.pt / Comb_Chamb.f_O.p_c<br/>
+<a name="e320">[E-320] </a>Injector_FUEL.PR_ch = 0<br/>
+<a name="e321">[E-321] </a>Injector_FUEL.p_out_ch = 0<br/>
+<a name="e322">[E-322] </a>Injector_FUEL.A_ch = 0<br/>
+<a name="e323">[E-323] </a>Injector_FUEL.M_out = 0<br/>
+<a name="e324">[E-324] </a>Injector_FUEL.v_ideal = Comb_Chamb.f_F.W / (LPRES.rho(Inlet_LH2.fluidV) * Injector_FUEL.A * Injector_FUEL.C_D)<br/>
+<a name="e325">[E-325] </a>Injector_FUEL.Re = LPRES.rho(Inlet_LH2.fluidV) * Injector_FUEL.v_ideal * Injector_FUEL.C_D * sqrt(4 * Injector_FUEL.A / 3.14159265358979) / LPRES.visc(Inlet_LH2.fluidV)<br/>
+<a name="e326">[E-326] </a>Injector_OXIDIZER.PR = FlowMeter_LOX.f_in.pt / Comb_Chamb.f_O.p_c<br/>
+<a name="e327">[E-327] </a>Injector_OXIDIZER.PR_ch = 0<br/>
+<a name="e328">[E-328] </a>Injector_OXIDIZER.p_out_ch = 0<br/>
+<a name="e329">[E-329] </a>Injector_OXIDIZER.A_ch = 0<br/>
+<a name="e330">[E-330] </a>Injector_OXIDIZER.M_out = 0<br/>
+<a name="e331">[E-331] </a>Injector_OXIDIZER.v_ideal = FlowMeter_LOX.f_in.W / (LPRES.rho(Inlet_LOX.fluidV) * Injector_OXIDIZER.A * Injector_OXIDIZER.C_D)<br/>
+<a name="e332">[E-332] </a>Injector_OXIDIZER.Re = LPRES.rho(Inlet_LOX.fluidV) * Injector_OXIDIZER.v_ideal * Injector_OXIDIZER.C_D * sqrt(4 * Injector_OXIDIZER.A / 3.14159265358979) / LPRES.visc(Inlet_LOX.fluidV)<br/>
+<a name="e333">[E-333] </a>FlowMeter_LOX.i.Data[1] = abs(FlowMeter_LOX.f_in.W)<br/>
+<a name="e334">[E-334] </a>ThrustMonitor_1.g.A_out = Comb_Chamb.AR * Comb_Chamb.A_th<br/>
+<br/>
+<hr>BOX 4 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v76" data-ajax='false'>Comb_Chamb.p_out_ch</a>&nbsp;</td><td><a href="doc_vars.par.html#v76" data-ajax='false'></a>&nbsp;</td><td>Pa&nbsp;</td><td>Choked outlet pressure&nbsp;</td><td>100&nbsp;</td><td>[E-335] ThrustMonitor_1.g.A_out / Comb_Chamb.A_th = LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e335">[E-335] </a>ThrustMonitor_1.g.A_out / Comb_Chamb.A_th = LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (Comb_Chamb.p_out_ch / Comb_Chamb.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))	{I@Comb_Chamb.p_out_ch}<br/>
+</b><hr>END OF BOX 4<hr><a name="e336">[E-336] </a>ControlPanel.i_Comb.Data[1] = ThrustMonitor_1.g.c_star<br/>
+<a name="e337">[E-337] </a>Nozzle_1.PR_sl = ((LPRES.gamma(Turbine_FUEL.f_in.fluid) + 1) / 2) ** (LPRES.gamma(Turbine_FUEL.f_in.fluid) / (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1))<br/>
+<a name="e338">[E-338] </a>Nozzle_1.p_out_ch = Nozzle_1.g.pt / Nozzle_1.PR_sl<br/>
+<a name="e339">[E-339] </a>Nozzle_1.p_out = MATH.max(Nozzle_1.p_amb, Nozzle_1.p_out_ch)<br/>
+<a name="e340">[E-340] </a>Nozzle_1.T_out = Nozzle_1.g.Tt / (1 + (LPRES.gamma(Turbine_FUEL.f_in.fluid) - 1) / 2 * Nozzle_1.M_out ** 2)<br/>
+<a name="e341">[E-341] </a>Nozzle_1.v_out = Nozzle_1.M_out * sqrt(LPRES.gamma(Turbine_FUEL.f_in.fluid) * LPRES.R(Turbine_FUEL.f_in.fluid) * Nozzle_1.T_out)<br/>
+<a name="e342">[E-342] </a>Nozzle_1.Thrust = CCV.f_in.W * Nozzle_1.v_out + Nozzle_1.A * (Nozzle_1.p_out - Nozzle_1.p_amb)<br/>
+<a name="e343">[E-343] </a>Nozzle_1.i.Data[1] = Nozzle_1.Thrust<br/>
+<a name="e344">[E-344] </a>ControlPanel.W_tot = FlowMeter_LH2.i.Data[1] + FlowMeter_LOX.i.Data[1]<br/>
+<br/>
+<hr>BOX 5 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v332" data-ajax='false'>ThrustMonitor_1.M_out</a>&nbsp;</td><td><a href="doc_vars.par.html#v332" data-ajax='false'></a>&nbsp;</td><td>-&nbsp;</td><td>Gas Mach number&nbsp;</td><td>100&nbsp;</td><td>[E-345] ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c = sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e345">[E-345] </a>ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / Comb_Chamb.f_O.p_c = sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))	{I@ThrustMonitor_1.M_out}<br/>
+</b><hr>END OF BOX 5<hr><a name="e346">[E-346] </a>ThrustMonitor_1.T_out = ThrustMonitor_1.g.Tt / (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2)<br/>
+<a name="e347">[E-347] </a>ThrustMonitor_1.v_out = ThrustMonitor_1.M_out * sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid) * LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.T_out)<br/>
+<a name="e348">[E-348] </a>ThrustMonitor_1.p_out = Comb_Chamb.f_O.p_c / (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (1 / ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid)))<br/>
+<a name="e349">[E-349] </a>ThrustMonitor_1.p_amb = LPRES.ISA_Pressure(LPRES.Altitude)<br/>
+<a name="e350">[E-350] </a>ControlPanel.Thrust = ThrustMonitor_1.g.W * ThrustMonitor_1.v_out + ThrustMonitor_1.g.A_out * (ThrustMonitor_1.p_out - ThrustMonitor_1.p_amb)<br/>
+<a name="e351">[E-351] </a>ControlPanel.Isp = ControlPanel.Thrust / ControlPanel.W_tot<br/>
+<a name="e352">[E-352] </a>ControlPanel.C_E = ControlPanel.Isp / ThrustMonitor_1.g.c_star<br/>
+<a name="e353">[E-353] </a>ControlPanel.Isp_0 = ControlPanel.Isp / 9.80665<br/>
+<a name="e354">[E-354] </a>ControlPanel.i_Thrust.Data[1] = ControlPanel.Thrust<br/>
+<a name="e355">[E-355] </a>CCV.dp = CCV.f_in.pt - Heat_exchanger_1.f_in.pt<br/>
+<a name="e356">[E-356] </a>Heat_exchanger_1.P_av = 0.5 * Turbine_FUEL.f_in.pt + 0.5 * CCV.f_in.pt - 0.5 * CCV.dp<br/>
+<a name="e357">[E-357] </a>Heat_exchanger_1.fluid_out[Comb_prod_visc] = Inlet_LH2.fluidV[Comb_prod_visc]<br/>
+<a name="e358">[E-358] </a>Heat_exchanger_1.fluid_out[Comb_prod_cond] = Inlet_LH2.fluidV[Comb_prod_cond]<br/>
+<a name="e359">[E-359] </a>Heat_exchanger_1.fluid_out[Comb_prod_rho] = Inlet_LH2.fluidV[Comb_prod_rho]<br/>
+<a name="e360">[E-360] </a>Heat_exchanger_1.fluid_out[LOX] = -Turbine_FUEL.f_in.fluid[LOX]<br/>
+<a name="e361">[E-361] </a>Heat_exchanger_1.fluid_out[LCH4] = -Turbine_FUEL.f_in.fluid[LCH4]<br/>
+<a name="e362">[E-362] </a>Heat_exchanger_1.fluid_out[LH2] = -Turbine_FUEL.f_in.fluid[LH2]<br/>
+<a name="e363">[E-363] </a>Heat_exchanger_1.fluid_out[MMH] = -Turbine_FUEL.f_in.fluid[MMH]<br/>
+<a name="e364">[E-364] </a>Heat_exchanger_1.f = 0<br/>
+<a name="e365">[E-365] </a>Heat_exchanger_1.D_eq = 1.3 * (Heat_exchanger_1.a * Heat_exchanger_1.b) ** 0.625 / (Heat_exchanger_1.a + Heat_exchanger_1.b) ** 0.25<br/>
+<a name="e366">[E-366] </a>MFV.M_th = 0<br/>
+<a name="e367">[E-367] </a>MFV.dp = MFV.f_in.pt - Injector_FUEL.f_in.pt<br/>
+<a name="e368">[E-368] </a>MOV.M_th = 0<br/>
+<a name="e369">[E-369] </a>CCV.M_th = 0<br/>
+<a name="e370">[E-370] </a>ControlPanel.i_W.Data[1] = FlowMeter_LH2.i.Data[1] + FlowMeter_LOX.i.Data[1]<br/>
+</body></html>

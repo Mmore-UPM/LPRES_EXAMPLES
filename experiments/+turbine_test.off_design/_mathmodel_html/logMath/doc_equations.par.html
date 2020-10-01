@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+turbine_test.off_design.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+turbine_test.off_design.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Equations<br /></h2>
+Equations: 27<br/>
+Note 3: In equations 'E' means explicit,'I' implicit,'L' linear,'F' function<br/>
+<a name="e1">[E-1] </a>Turbine.m.N = 0.10471975511966 * Turbine.rpm<br/>
+<a name="e2">[E-2] </a>Turbine.U = Turbine.m.N * Turbine.r_m<br/>
+<a name="e3">[E-3] </a>Nozzle.p_amb = LPRES.ISA_Pressure(LPRES.Altitude)<br/>
+<br/>
+<hr>BOX 1 IS NONLINEAR<hr><table border="1" cellspacing="0" bgcolor="#EAFFE8" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>ALGEBRAICS&nbsp;</b></color></td>
+<td><color="black"><b>ALIAS&nbsp;</b></color></td>
+<td><color="black"><b>UNITS&nbsp;</b></color></td>
+<td><color="black"><b>DESCRIPTION&nbsp;</b></color></td>
+<td><color="black"><b>INITIAL&nbsp;</b></color></td>
+<td><color="black"><b>RESIDUE EQUATION
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td><a href="doc_vars.par.html#v37" data-ajax='false'>Turbine.M_2</a>&nbsp;</td><td><a href="doc_vars.par.html#v37" data-ajax='false'></a>&nbsp;</td><td>-&nbsp;</td><td>Mach number at the stator outlet&nbsp;</td><td>0.1&nbsp;</td><td>[E-17] Nozzle.g.W = Nozzle.A_sl * LPRES.FGAMMA(Inlet.fluidV) * Nozzle.g.pt / sqrt(Nozzle.g.Tt * LPRES.R(Inlet.fluidV))&nbsp;</td></tr>
+</table>
+<br/>
+<h4>Equations:</h4>&nbsp;&nbsp;&nbsp;&nbsp;<a name="e4">[E-4] </a>Turbine.MFP = Turbine.A_in / sqrt(LPRES.R(Inlet.fluidV)) * sqrt(LPRES.gamma(Inlet.fluidV)) * MATH.min(Turbine.M_2, 1) * (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * MATH.min(Turbine.M_2, 1) ** 2) ** (-(LPRES.gamma(Inlet.fluidV) + 1) / 2 / (LPRES.gamma(Inlet.fluidV) - 1))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e5">[E-5] </a>Nozzle.g.W = Turbine.MFP * Inlet.pt / sqrt(Inlet.Tt)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e6">[E-6] </a>Turbine.V_z2 = Turbine.cos_2 * Turbine.M_2 * sqrt(LPRES.gamma(Inlet.fluidV) * LPRES.R(Inlet.fluidV) * Inlet.Tt / (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * Turbine.M_2 ** 2))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e7">[E-7] </a>Turbine.phi = Turbine.V_z2 / Turbine.U<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e8">[E-8] </a>Turbine.psi = (Turbine.psi_d + 1) / Turbine.phi_d * Turbine.phi - 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e9">[E-9] </a>Turbine.tau = Turbine.psi * Turbine.U ** 2<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e10">[E-10] </a>Nozzle.g.Tt = Inlet.Tt - Turbine.tau / LPRES.cp(Inlet.fluidV)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e11">[E-11] </a>Turbine.alpha = Nozzle.g.Tt / Inlet.Tt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e12">[E-12] </a>Turbine.beta = (1 - (1 - Turbine.alpha) / Turbine.eta_d) ** (1 / ((LPRES.gamma(Inlet.fluidV) - 1) / LPRES.gamma(Inlet.fluidV)))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e13">[E-13] </a>Nozzle.g.pt = Turbine.beta * Inlet.pt<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e14">[E-14] </a>Nozzle.PR = Nozzle.g.pt / Nozzle.p_amb<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e15">[E-15] </a>Nozzle.M_out =  ZONE[2] (Nozzle.PR < Nozzle.PR_sl) sqrt(2 * (Nozzle.PR ** ((LPRES.gamma(Inlet.fluidV) - 1) / LPRES.gamma(Inlet.fluidV)) - 1) / (LPRES.gamma(Inlet.fluidV) - 1))	  OTHERS 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="e16">[E-16] </a>Nozzle.A_sl =  ZONE[1] (Nozzle.M_out > 0) Nozzle.A * Nozzle.M_out / ((2 + (LPRES.gamma(Inlet.fluidV) - 1) * Nozzle.M_out ** 2) / (LPRES.gamma(Inlet.fluidV) + 1)) ** ((LPRES.gamma(Inlet.fluidV) + 1) / (2 * (LPRES.gamma(Inlet.fluidV) - 1)))	  OTHERS Nozzle.A * -Nozzle.M_out / ((2 + (LPRES.gamma(Inlet.fluidV) - 1) * Nozzle.M_out ** 2) / (LPRES.gamma(Inlet.fluidV) + 1)) ** ((LPRES.gamma(Inlet.fluidV) + 1) / (2 * (LPRES.gamma(Inlet.fluidV) - 1)))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>(Residue equation) <a name="e17">[E-17] </a>Nozzle.g.W = Nozzle.A_sl * LPRES.FGAMMA(Inlet.fluidV) * Nozzle.g.pt / sqrt(Nozzle.g.Tt * LPRES.R(Inlet.fluidV))	{I@Turbine.M_2}<br/>
+</b><hr>END OF BOX 1<hr><a name="e18">[E-18] </a>Turbine.m.Power = Nozzle.g.W * Turbine.tau<br/>
+<a name="e19">[E-19] </a>Turbine.theta = 1 / Turbine.alpha<br/>
+<a name="e20">[E-20] </a>Turbine.pi = 1 / Turbine.beta<br/>
+<a name="e21">[E-21] </a>Nozzle.PR_sl = ((LPRES.gamma(Inlet.fluidV) + 1) / 2) ** (LPRES.gamma(Inlet.fluidV) / (LPRES.gamma(Inlet.fluidV) - 1))<br/>
+<a name="e22">[E-22] </a>Nozzle.p_out_ch = Nozzle.g.pt / Nozzle.PR_sl<br/>
+<a name="e23">[E-23] </a>Nozzle.p_out = MATH.max(Nozzle.p_amb, Nozzle.p_out_ch)<br/>
+<a name="e24">[E-24] </a>Nozzle.T_out = Nozzle.g.Tt / (1 + (LPRES.gamma(Inlet.fluidV) - 1) / 2 * Nozzle.M_out ** 2)<br/>
+<a name="e25">[E-25] </a>Nozzle.v_out = Nozzle.M_out * sqrt(LPRES.gamma(Inlet.fluidV) * LPRES.R(Inlet.fluidV) * Nozzle.T_out)<br/>
+<a name="e26">[E-26] </a>Nozzle.Thrust = Nozzle.g.W * Nozzle.v_out + Nozzle.A * (Nozzle.p_out - Nozzle.p_amb)<br/>
+<a name="e27">[E-27] </a>Nozzle.i.Data[1] = Nozzle.Thrust<br/>
+</body></html>

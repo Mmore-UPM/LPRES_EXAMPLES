@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="prueba" partition="design">
+<noDerivatives value="TRUE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="CombCha_1.A_th"/>
+  <variable name="Injector_F.A"/>
+  <variable name="Injector_O.A"/>
+</noDatas>
+<boundaries>
+  <variable name="CombCha_1.OF"/>
+  <variable name="CombCha_1.f_F.W"/>
+  <variable name="CombCha_1.g.pt"/>
+  <variable name="Inlet_F.Tt"/>
+  <variable name="Inlet_F.pt"/>
+  <variable name="Inlet_OXIDISER.Tt"/>
+  <variable name="Inlet_OXIDISER.pt"/>
+</boundaries>
+<algebraics>
+  <variable name="CombCha_1.p_out_ch"/>
+</algebraics>
+</partitionInfo>

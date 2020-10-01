@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<plotWindow title="Isp_sea level" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Isp_sea level" graphType="plot_x_y">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="Comb_Chamb.AR">
+							<titleAxe value="Comb_Chamb.AR"/>
+							<scale minCurrent="18.8395" maxCurrent="23.1468" minCustom="5" maxCustom="55" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value="Isp_vacuum"/>
+							<scale minCurrent="385.845" maxCurrent="390.871" minCustom="0" maxCustom="440" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font family="MS Shell Dlg 2"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font family="MS Shell Dlg 2"/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel.Isp_0" nick="P_c"/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+		<tab name="Tab_2">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Turbine_FUEL.pi"/>
+					<var name="Turbine_OXIDIZER.pi"/>
+					<var name="Comb_Chamb.p_c"/>
+					<var name="Pump_FUEL_LH2.dp"/>
+					<var name="Pump_LOX_OXIDIZER.dp"/>
+					<var name="Turbine_FUEL.tau"/>
+					<var name="Turbine_OXIDIZER.tau"/>
+					<var name="Injector_FUEL.v_ideal"/>
+					<var name="Injector_OXIDIZER.v_ideal"/>
+					<var name="Comb_Chamb.AR"/>
+					<var name="FlowMeter_LOX.f_in.W"/>
+					<var name="Heat_exchanger_1.f_in.W"/>
+					<var name="Comb_Chamb.OF"/>
+					<var name="LPRES.Altitude"/>
+					<var name="Turbine_FUEL.f_in.Tt"/>
+					<var name="Comb_Chamb.M_r"/>
+					<var name="Comb_Chamb.p_out_ch"/>
+					<var name="Heat_exchanger_1.h.T"/>
+					<var name="Pump_FUEL_LH2.U"/>
+					<var name="Pump_LOX_OXIDIZER.U"/>
+					<var name="ThrustMonitor_1.M_out"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="141" height="87" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+				<column name="type" width="125"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="87" width="958" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="normal" height="1001" width="958" posX="1" posY="78" currentTab="Tab_2" />
+</experiment>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<tableWindow title="" x="0" y="0" dx="1298" dy="393">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="CombCha_1.T_c"/>
+					<var name="CombCha_1.c_star"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="192" visible="true" pos="right" >
+		<currentTab name="inputs"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+				<var name="CombCha_1.OF" value="8"/>
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+				<column name="type" width="125"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

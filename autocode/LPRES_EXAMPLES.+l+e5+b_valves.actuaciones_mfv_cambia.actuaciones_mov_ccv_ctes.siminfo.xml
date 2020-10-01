@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usedInputFiles version="1.0" library="LPRES_EXAMPLES" component="LE5B_valves" partition="actuaciones_mfv_cambia" experiment="actuaciones_mov_ccv_ctes" date="2020:09:08" time="17:25:45">
+  <rfile special="false" name="@LPRES_EXAMPLES@/experiments/+l+e5+b_valves.valves_design/exp1/report.rpt.xml" path="C:/PROOSIS_3.8.1/LPRES/libs/LPRES_EXAMPLES/experiments/+l+e5+b_valves.valves_design/exp1/report.rpt.xml"/>
+  <rvar id="LPRES_EXAMPLES.MFV_A_case1_param" type="REAL" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="0"/>
+  <rvar id="LPRES_EXAMPLES.globalDebugLevel" type="INTEGER" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="0"/>
+  <rvar id="LPRES_EXAMPLES.globalNameParam_case1" type="STRING" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault=""/>
+  <rvar id="rc" type="BOOLEAN" category="EXPERIMENT_VAR" inputcandidates="FALSE*TRUE" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="TRUE"/>
+</usedInputFiles>

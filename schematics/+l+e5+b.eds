@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" sorting="customized" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" connector-creation="true" >
+
+	<grid enabled="false" snap="false" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" margin="false" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<component id="Pump_FUEL_LH2" library="LPRES" type="Pump" layer="1" elPosition="2" >
+	
+		<symbol cx="348" cy="289.518" sx="105" sy="84.0355" dx="-121.518" dy="6.48223" rotation="90" onLabel="true" />
+	
+		<label cx="69" cy="14" dx="150.482" dy="334.518" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.612" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Pump_LOX_OXIDIZER" library="LPRES" type="Pump" layer="1" elPosition="3" >
+	
+		<symbol cx="348" cy="289.518" sx="105" sy="84.0355" dx="814.482" dy="6.48223" rotation="-270" flipY="true" onLabel="true" />
+	
+		<label cx="88" cy="14" dx="1067.48" dy="334.518" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.653" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Turbine_FUEL" library="LPRES" type="Turbine_ch" layer="1" elPosition="4" >
+	
+		<symbol cx="236" cy="137.974" sx="129" sy="92.9472" dx="320" dy="172.053" flipY="true" onLabel="true" />
+	
+		<label cx="56" cy="14" dx="489.5" dy="353" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.476" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Comb_Chamb" library="LPRES" type="CombCha" layer="1" elPosition="5"  hotPort="i" >
+	
+		<symbol cx="218" cy="154" sx="117" sy="181" dx="472" dy="472" onLabel="true" />
+	
+		<label cx="56" cy="14" dx="623" dy="713" />
+	
+		<instanceData>
+			<datum id="AR" value="110" pos="D" />
+			<datum id="Cooled" value="Yes" pos="P" />
+			<datum id="eta_d" value="0.99" pos="D" />
+			<datum id="Q_comb" value="15.1e6" pos="D" />
+			<datum id="cp_P" value="3100" pos="D" />
+			<datum id="M_P" value="18" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inlet_LOX" library="LPRES" type="Inlet" layer="1" elPosition="8" >
+	
+		<symbol cx="240.029" cy="144" sx="64.9412" sy="89" dx="1048" dy="-64" onLabel="true" />
+	
+		<label cx="39.5" cy="14" dx="1244.03" dy="121" />
+	
+		<instanceData>
+			<datum id="fluid" value="LOX" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inlet_LH2" library="LPRES" type="Inlet" layer="1" elPosition="9" >
+	
+		<symbol cx="240.029" cy="144" sx="64.9412" sy="89" dx="-144" dy="-64" onLabel="true" />
+	
+		<label cx="38" cy="14" dx="53.5294" dy="121" />
+	
+		<instanceData>
+			<datum id="fluid" value="LH2" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="FlowMeter_LH2" library="LPRES" type="FlowMeter" layer="1" elPosition="13" >
+	
+		<symbol cx="248" cy="144" sx="49" sy="73" dx="-52" dy="328" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="60" cy="14" dx="127" dy="505" />
+	
+	</component>
+
+	<connector id="Connector_5" sShape="Pump_FUEL_LH2" sPort="f_out" eShape="FlowMeter_LH2" ePort="f_in" elPosition="4" lineColor="0,0,255"   />
+
+	<component id="FlowMeter_LOX" library="LPRES" type="FlowMeter" layer="1" elPosition="15"  hotPort="i" >
+	
+		<symbol cx="248" cy="144" sx="49" sy="73" dx="1044" dy="304" onLabel="true" />
+	
+		<label cx="61.5" cy="14" dx="1221.5" dy="481" />
+	
+	</component>
+
+	<connector id="Connector_6" sShape="Pump_LOX_OXIDIZER" sPort="f_out" eShape="FlowMeter_LOX" ePort="f_in" points="1173,416"  intermediate1="1" elPosition="5" lineColor="0,255,127"   />
+
+	<component id="Turbine_OXIDIZER" library="LPRES" type="Turbine_ch" layer="1" elPosition="17"  hotPort="f_out" >
+	
+		<symbol cx="236" cy="137.974" sx="129" sy="92.9472" dx="624" dy="172.053" flipY="true" onLabel="true" />
+	
+		<label cx="73.5" cy="14" dx="776" dy="353" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.392" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_3" sShape="Turbine_FUEL" sPort="m" eShape="Pump_FUEL_LH2" ePort="m" elPosition="10"  />
+
+	<component id="ThrustMonitor_1" library="LPRES" type="ThrustMonitor" layer="1" elPosition="14"  hotPort="g" >
+	
+		<symbol cx="348" cy="264" sx="121" sy="73" dx="356" dy="588" onLabel="true" />
+	
+		<label cx="62.5" cy="14" dx="630" dy="885" />
+	
+	</component>
+
+	<connector id="Connector_4" sShape="Pump_LOX_OXIDIZER" sPort="m" eShape="Turbine_OXIDIZER" ePort="m" points="1125,208 800,208" elPosition="11"  />
+
+	<component id="SplitFrac_1" library="LPRES" type="SplitFrac" layer="1" elPosition="18"  hotPort="f_b" >
+	
+		<symbol cx="224" cy="136" sx="81" sy="49" dx="8" dy="452" rotation="90" flipY="true" onLabel="true" />
+	
+		<label cx="45.5" cy="14" dx="177" dy="609" />
+	
+	</component>
+
+	<component id="Injector_OXIDIZER" library="LPRES" type="Injector" layer="1" elPosition="21" >
+	
+		<symbol cx="240" cy="134" sx="17" sy="69" dx="536" dy="320" onLabel="true" />
+	
+		<label cx="73.5" cy="14" dx="695.5" dy="485" />
+	
+		<instanceData>
+			<datum id="Type" value="Liquid" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Injector_FUEL" library="LPRES" type="Injector" layer="1" elPosition="20" >
+	
+		<symbol cx="240" cy="134" sx="17" sy="69" dx="392" dy="320" onLabel="true" />
+	
+		<label cx="56" cy="14" dx="569" dy="485" />
+	
+		<instanceData>
+			<datum id="Type" value="Liquid" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_16" sShape="Injector_FUEL" sPort="f_out" eShape="Comb_Chamb" ePort="f_F" points="632,536 680,536" elPosition="19" lineColor="0,0,255"   />
+
+	<component id="Nozzle_1" library="LPRES" type="Nozzle" layer="1" elPosition="26"  hotPort="i" >
+	
+		<symbol cx="354" cy="281.75" sx="85" sy="148.5" dx="608" dy="388" onLabel="true" />
+	
+		<label cx="37" cy="14" dx="917.5" dy="740.5" />
+	
+	</component>
+
+	<connector id="Connector_17" sShape="Injector_OXIDIZER" sPort="f_out" eShape="Comb_Chamb" ePort="f_O" points="776,536 712,536" elPosition="20" lineColor="0,255,127"   />
+
+	<connector id="Connector_9" sShape="FlowMeter_LH2" sPort="f_out" eShape="SplitFrac_1" ePort="f_in" elPosition="21" lineColor="0,0,255"   />
+
+	<connector id="Connector_14" sShape="SplitFrac_1" sPort="f_b" eShape="Injector_FUEL" ePort="f_in" points="432,588 432,424" elPosition="24" lineColor="0,0,255"   />
+
+	<connector id="Connector_18" sShape="FlowMeter_LOX" sPort="f_out" eShape="Injector_OXIDIZER" ePort="f_in" points="816,480 816,424" elPosition="26" lineColor="0,255,127"   />
+
+	<component id="ControlPanel" library="LPRES" type="ControlPanel" layer="1" elPosition="29"  hotPort="i_Comb" >
+	
+		<symbol cx="354" cy="282" sx="173" sy="93" dx="860" dy="436" onLabel="true" />
+	
+		<label cx="50.5" cy="14" dx="1151" dy="761" />
+	
+	</component>
+
+	<connector id="Connector_26" sShape="FlowMeter_LH2" sPort="i" eShape="ControlPanel" ePort="i_W" points="56,472 56,952 1096,952 1096,808 1296,808" elPosition="36"  />
+
+	<connector id="Connector_27" sShape="FlowMeter_LOX" sPort="i" eShape="ControlPanel" ePort="i_W" points="1336,448 1336,704" elPosition="37"  />
+
+	<component id="Contact_Wall_1" library="LPRES" type="Contact_Wall" layer="1" elPosition="30"  hotPort="h_in" >
+	
+		<symbol cx="212" cy="144" sx="73" sy="37" dx="372" dy="520" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="61" cy="14" dx="510.5" dy="679" />
+	
+		<instanceData>
+			<datum id="k_w" value="150" pos="D" />
+			<datum id="t_w" value="0.005" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_28" sShape="Comb_Chamb" sPort="i" eShape="ControlPanel" ePort="i_Comb" points="744,596 840,596 840,832 1040,832 1040,692"  intermediate1="1" elPosition="38"  />
+
+	<component id="Heat_exchanger_1" library="LPRES" type="Heat_exchanger" layer="1" elPosition="31" >
+	
+		<symbol cx="240" cy="128" sx="153" sy="65" dx="256" dy="536" rotation="-90" flipY="true" onLabel="true" />
+	
+		<label cx="72" cy="14" dx="409" dy="693" />
+	
+		<instanceData>
+			<datum id="Type_HE" value="Liquid2Gas" pos="P" />
+			<datum id="Type_dp" value="Known_dp" pos="P" />
+			<datum id="dp" value="3e6" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_13" sShape="Contact_Wall_1" sPort="h_out" eShape="Heat_exchanger_1" ePort="h" elPosition="40"  />
+
+	<connector id="Connector_23" sShape="Heat_exchanger_1" sPort="f_out" eShape="Turbine_FUEL" ePort="f_in" points="472,352"  intermediate1="2" elPosition="41" lineColor="255,0,0"   />
+
+	<connector id="Connector_10" sShape="Turbine_FUEL" sPort="f_out" eShape="Turbine_OXIDIZER" ePort="f_in" elPosition="43" lineColor="255,0,0"   />
+
+	<connector id="Connector_12" sShape="Comb_Chamb" sPort="h" eShape="Contact_Wall_1" ePort="h_in" points="616,660"  intermediate1="1" elPosition="39"  />
+
+	<connector id="Connector_11" sShape="Turbine_OXIDIZER" sPort="f_out" eShape="Nozzle_1" ePort="g" points="960,352"  intermediate1="2" elPosition="44" lineColor="255,0,0"   />
+
+	<connector id="Connector_1" sShape="Inlet_LOX" sPort="f" eShape="Pump_LOX_OXIDIZER" ePort="f_in" points="1288,248" elPosition="46" lineColor="0,255,127"   />
+
+	<connector id="Connector_15" sShape="SplitFrac_1" sPort="f_out" eShape="Heat_exchanger_1" ePort="f_in" points="216,736" elPosition="45" lineColor="0,0,255"   />
+
+	<connector id="Connector_2" sShape="Inlet_LH2" sPort="f" eShape="Pump_FUEL_LH2" ePort="f_in" points="96,248" elPosition="47" lineColor="0,0,255"   />
+
+	<connector id="Connector_24" sShape="Comb_Chamb" sPort="g" eShape="ThrustMonitor_1" ePort="g" points="692,712"  intermediate1="1" elPosition="34"  />
+
+	<connector id="Connector_25" sShape="ThrustMonitor_1" sPort="i" eShape="ControlPanel" ePort="i_Thrust" points="1072,864 1072,720" elPosition="35"  />
+
+	<bodyEL>
+	<![CDATA[-- EL code of the schematic.
+-- The COMPONENT definition lines are blocked for edition.
+-- You can edit the parameters clicking over them.
+
+COMPONENT %NAME% 
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="LPRES" version="2.0.1" auto="true" />
+</schematic>

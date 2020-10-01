@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="turbine" partition="diseno">
+<noDerivatives value="TRUE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Nozzle.A"/>
+  <variable name="Turbine.A_in"/>
+  <variable name="Turbine.r_m"/>
+</noDatas>
+<boundaries>
+  <variable name="Inlet.Tt"/>
+  <variable name="Inlet.pt"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="Nozzle.g.W"/>
+  <variable name="Turbine.M_2"/>
+  <variable name="Turbine.m.Power"/>
+  <variable name="Turbine.rpm"/>
+</boundaries>
+<algebraics>
+  <variable name="Turbine.U"/>
+</algebraics>
+</partitionInfo>

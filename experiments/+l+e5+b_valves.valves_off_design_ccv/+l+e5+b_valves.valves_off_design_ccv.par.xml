@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="LPRES_EXAMPLES" component="LE5B_valves" partition="valves_off_design_ccv">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="CCV.A"/>
+  <variable name="Comb_Chamb.OF"/>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="Turbine_FUEL.f_in.Tt"/>
+</boundaries>
+<algebraics>
+  <variable name="Comb_Chamb.M_r"/>
+  <variable name="Comb_Chamb.W_F"/>
+  <variable name="Pump_FUEL_LH2.tau_id"/>
+  <variable name="Pump_LOX_OXIDIZER.tau_id"/>
+  <variable name="Turbine_FUEL.f_in.pt"/>
+  <variable name="Pump_FUEL_LH2.U"/>
+  <variable name="Pump_LOX_OXIDIZER.U"/>
+  <variable name="Comb_Chamb.p_out_ch"/>
+  <variable name="ThrustMonitor_1.M_out"/>
+  <variable name="MFV.A"/>
+  <variable name="MOV.A"/>
+</algebraics>
+</partitionInfo>

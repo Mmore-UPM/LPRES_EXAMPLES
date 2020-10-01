@@ -1,0 +1,51 @@
+Experiment: pc_new Library: LPRES_EXAMPLES Component: LE5B_new_pc Partition: pc_new_design
+User: mmore Date: 2020:09:08 Time: 17:26:19
+Platform: win64_gcc64v4_9 OS: Microsoft Windows [Version 10.0.18362]
+Library dependency list: LPRES V2.0.1 LPRES_EXAMPLES V0.1 MATH V3.2.3 
+Programme and Version: PROOSIS V3.8.1 
+
+===========================================================================
+	Results summary
+===========================================================================
+
+===========================================================================
+	Global design variables:
+===========================================================================
+
+
+===========================================================================
+	Point 1
+===========================================================================
+
+
+Boundaries : 
+
+Comb_Chamb.f_O.p_c = 5000000 (Pa)
+FlowMeter_LOX.f_in.W = 26 (kg/s)
+Heat_exchanger_1.f_in.W = 1.617 (kg/s)
+Inlet_LH2.Tt = 21 (K)
+Inlet_LH2.pt = 300000 (Pa)
+Inlet_LOX.Tt = 90 (K)
+Inlet_LOX.pt = 500000 (Pa)
+LPRES.Altitude = 100000 (m)
+Pump_FUEL_LH2.dp = 7724795.65 (Pa)
+Pump_FUEL_LH2.phi = 0.4 (-)
+Pump_LOX_OXIDIZER.dp = 9536784.75 (Pa)
+Pump_LOX_OXIDIZER.phi = 0.4 (-)
+Turbine_FUEL.f_in.Tt = 140 (K)
+Turbine_FUEL.rpm = 52100 (rpm)
+Turbine_OXIDIZER.rpm = 17700 (rpm)
+
+Local results :
+
+Comb_Chamb.OF = 11.2554
+Pump_FUEL_LH2.U = 497.001
+Pump_LOX_OXIDIZER.U = 131.857
+Comb_Chamb.p_out_ch = 27878.9
+Comb_Chamb.M_r = 2.76943
+Heat_exchanger_1.h.T = 267.325
+ThrustMonitor_1.M_out = 3.68791
+
+Closure equations :
+
+Turbine_FUEL.f_in.W = 0.7*Injector_FUEL.f_in.W        	Residue: 8.88178e-016 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Mathematical Model View</title>
+<link href="./css/mlog.css" rel="stylesheet">
+<script src="./css/jquery-1.10.2.min.js"></script>
+</head><body>
+<div data-role="page">
+<div data-role="main" class="ui-content">
+<div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.valves_design.par.html">Mathematical Model View</a>
+</div><div class="qindex"><a class="qindex" rel="external" data-ajax='false' href="../+l+e5+b_valves.valves_design.par.html">Summary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_vars.par.html">Variables</a> |
+<a class="qindexHL" rel="external" data-ajax='false' href="doc_equivalents.par.html">Equivalents</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_boundary.par.html">Boundary</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_jacobian.par.html">Jacobian</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equations.par.html">Equations</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_init.par.html">Init</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_discrete.par.html">Discrete</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_design.par.html">Design</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_highindex.par.html">High Index</a> |
+<a class="qindex" rel="external" data-ajax='false' href="doc_equationmatrix.par.html">Equation Matrix</a>
+</div><h2>Equivalent Variables<br /></h2>
+<br/>
+<font size="4" color="black">Equivalent Variables</font><br/>
+<table border="1" cellspacing="0" ><tr><td><color="black"><b>#&nbsp;</b></color></td>
+<td><color="black"><b>NAME&nbsp;</b></color></td>
+<td><color="black"><b>EQUIVALENTS
+&nbsp;</b></color></td>
+</tr>
+<tr><td>1&nbsp;</td><td>CCV.f_in.W&nbsp;</td><td>CCV.f_out.W, Heat_exchanger_1.f_in.W, Heat_exchanger_1.f_out.W, Nozzle_1.g.W, SplitFrac_1.f_out.W, Turbine_FUEL.f_in.W, Turbine_FUEL.f_out.W, Turbine_OXIDIZER.f_in.W, Turbine_OXIDIZER.f_out.W&nbsp;</td></tr>
+<tr><td>2&nbsp;</td><td>CCV.f_in.pt&nbsp;</td><td>SplitFrac_1.f_out.pt&nbsp;</td></tr>
+<tr><td>3&nbsp;</td><td>Comb_Chamb.A_th&nbsp;</td><td>Comb_Chamb.g.A_th, ThrustMonitor_1.g.A_th&nbsp;</td></tr>
+<tr><td>4&nbsp;</td><td>Comb_Chamb.A_wet&nbsp;</td><td>Comb_Chamb.h.A, Contact_Wall_1.h_in.A&nbsp;</td></tr>
+<tr><td>5&nbsp;</td><td>Comb_Chamb.eta_d&nbsp;</td><td>Comb_Chamb.eta&nbsp;</td></tr>
+<tr><td>6&nbsp;</td><td>Comb_Chamb.f_F.T&nbsp;</td><td>CCV.f_in.Tt, CCV.f_out.Tt, FlowMeter_LH2.f_in.Tt, FlowMeter_LH2.f_out.Tt, Heat_exchanger_1.f_in.Tt, Injector_FUEL.f_in.Tt, Injector_FUEL.f_out.T, MFV.f_in.Tt, MFV.f_out.Tt, Pump_FUEL_LH2.f_out.Tt, SplitFrac_1.f_b.Tt, SplitFrac_1.f_in.Tt, SplitFrac_1.f_out.Tt&nbsp;</td></tr>
+<tr><td>7&nbsp;</td><td>Comb_Chamb.f_F.W&nbsp;</td><td>Injector_FUEL.f_in.W, Injector_FUEL.f_out.W, MFV.f_in.W, MFV.f_out.W, SplitFrac_1.f_b.W&nbsp;</td></tr>
+<tr><td>8&nbsp;</td><td>Comb_Chamb.f_O.p_c&nbsp;</td><td>Comb_Chamb.f_F.p, Comb_Chamb.f_F.p_c, Comb_Chamb.f_O.p, Comb_Chamb.g.pt, Comb_Chamb.p_c, Injector_FUEL.f_out.p, Injector_FUEL.f_out.p_c, Injector_OXIDIZER.f_out.p, Injector_OXIDIZER.f_out.p_c, ThrustMonitor_1.g.pt&nbsp;</td></tr>
+<tr><td>9&nbsp;</td><td>Comb_Chamb.h.T&nbsp;</td><td>Contact_Wall_1.h_in.T&nbsp;</td></tr>
+<tr><td>10&nbsp;</td><td>Contact_Wall_1.Q&nbsp;</td><td>Contact_Wall_1.h_in.Q&nbsp;</td></tr>
+<tr><td>11&nbsp;</td><td>ControlPanel.Thrust&nbsp;</td><td>ThrustMonitor_1.Thrust&nbsp;</td></tr>
+<tr><td>12&nbsp;</td><td>ControlPanel.i_Comb.Data&nbsp;</td><td>Comb_Chamb.i.Data&nbsp;</td></tr>
+<tr><td>13&nbsp;</td><td>ControlPanel.i_Thrust.Data&nbsp;</td><td>ThrustMonitor_1.i.Data&nbsp;</td></tr>
+<tr><td>14&nbsp;</td><td>FlowMeter_LH2.f_in.W&nbsp;</td><td>FlowMeter_LH2.f_out.W, Inlet_LH2.W, Inlet_LH2.f.W, Pump_FUEL_LH2.f_in.W, Pump_FUEL_LH2.f_out.W, SplitFrac_1.f_in.W&nbsp;</td></tr>
+<tr><td>15&nbsp;</td><td>FlowMeter_LH2.f_in.pt&nbsp;</td><td>FlowMeter_LH2.f_out.pt, Pump_FUEL_LH2.f_out.pt, SplitFrac_1.f_in.pt&nbsp;</td></tr>
+<tr><td>16&nbsp;</td><td>FlowMeter_LOX.f_in.Tt&nbsp;</td><td>Comb_Chamb.f_O.T, FlowMeter_LOX.f_out.Tt, Injector_OXIDIZER.f_in.Tt, Injector_OXIDIZER.f_out.T, MOV.f_in.Tt, MOV.f_out.Tt, Pump_LOX_OXIDIZER.f_out.Tt&nbsp;</td></tr>
+<tr><td>17&nbsp;</td><td>FlowMeter_LOX.f_in.W&nbsp;</td><td>Comb_Chamb.f_O.W, FlowMeter_LOX.f_out.W, Injector_OXIDIZER.f_in.W, Injector_OXIDIZER.f_out.W, Inlet_LOX.W, Inlet_LOX.f.W, MOV.f_in.W, MOV.f_out.W, Pump_LOX_OXIDIZER.f_in.W, Pump_LOX_OXIDIZER.f_out.W&nbsp;</td></tr>
+<tr><td>18&nbsp;</td><td>FlowMeter_LOX.f_in.pt&nbsp;</td><td>FlowMeter_LOX.f_out.pt, Injector_OXIDIZER.f_in.pt, MOV.f_out.pt&nbsp;</td></tr>
+<tr><td>19&nbsp;</td><td>Heat_exchanger_1.f_in.pt&nbsp;</td><td>CCV.f_out.pt&nbsp;</td></tr>
+<tr><td>20&nbsp;</td><td>Heat_exchanger_1.h.A&nbsp;</td><td>Contact_Wall_1.h_out.A, Heat_exchanger_1.A_wet_cooling&nbsp;</td></tr>
+<tr><td>21&nbsp;</td><td>Heat_exchanger_1.h.Q&nbsp;</td><td>Comb_Chamb.h.Q, Contact_Wall_1.h_out.Q, Heat_exchanger_1.Q&nbsp;</td></tr>
+<tr><td>22&nbsp;</td><td>Heat_exchanger_1.h.T&nbsp;</td><td>Contact_Wall_1.h_out.T, Heat_exchanger_1.T_w&nbsp;</td></tr>
+<tr><td>23&nbsp;</td><td>Injector_FUEL.f_in.pt&nbsp;</td><td>MFV.f_out.pt&nbsp;</td></tr>
+<tr><td>24&nbsp;</td><td>Inlet_LH2.Tt&nbsp;</td><td>Inlet_LH2.f.Tt, Pump_FUEL_LH2.f_in.Tt&nbsp;</td></tr>
+<tr><td>25&nbsp;</td><td>Inlet_LH2.fluidV&nbsp;</td><td>CCV.f_in.fluid, CCV.f_out.fluid, Comb_Chamb.f_F.fluid, FlowMeter_LH2.f_in.fluid, FlowMeter_LH2.f_out.fluid, Heat_exchanger_1.f_in.fluid, Injector_FUEL.f_in.fluid, Injector_FUEL.f_out.fluid, Inlet_LH2.f.fluid, MFV.f_in.fluid, MFV.f_out.fluid, Pump_FUEL_LH2.f_in.fluid, Pump_FUEL_LH2.f_out.fluid, SplitFrac_1.f_b.fluid, SplitFrac_1.f_in.fluid, SplitFrac_1.f_out.fluid&nbsp;</td></tr>
+<tr><td>26&nbsp;</td><td>Inlet_LH2.pt&nbsp;</td><td>Inlet_LH2.f.pt, Pump_FUEL_LH2.f_in.pt&nbsp;</td></tr>
+<tr><td>27&nbsp;</td><td>Inlet_LOX.Tt&nbsp;</td><td>Inlet_LOX.f.Tt, Pump_LOX_OXIDIZER.f_in.Tt&nbsp;</td></tr>
+<tr><td>28&nbsp;</td><td>Inlet_LOX.fluidV&nbsp;</td><td>Comb_Chamb.f_O.fluid, FlowMeter_LOX.f_in.fluid, FlowMeter_LOX.f_out.fluid, Injector_OXIDIZER.f_in.fluid, Injector_OXIDIZER.f_out.fluid, Inlet_LOX.f.fluid, MOV.f_in.fluid, MOV.f_out.fluid, Pump_LOX_OXIDIZER.f_in.fluid, Pump_LOX_OXIDIZER.f_out.fluid&nbsp;</td></tr>
+<tr><td>29&nbsp;</td><td>Inlet_LOX.pt&nbsp;</td><td>Inlet_LOX.f.pt, Pump_LOX_OXIDIZER.f_in.pt&nbsp;</td></tr>
+<tr><td>30&nbsp;</td><td>MFV.f_in.pt&nbsp;</td><td>SplitFrac_1.f_b.pt&nbsp;</td></tr>
+<tr><td>31&nbsp;</td><td>MOV.f_in.pt&nbsp;</td><td>Pump_LOX_OXIDIZER.f_out.pt&nbsp;</td></tr>
+<tr><td>32&nbsp;</td><td>Nozzle_1.g.Tt&nbsp;</td><td>Turbine_OXIDIZER.f_out.Tt&nbsp;</td></tr>
+<tr><td>33&nbsp;</td><td>Nozzle_1.g.pt&nbsp;</td><td>Turbine_OXIDIZER.f_out.pt&nbsp;</td></tr>
+<tr><td>34&nbsp;</td><td>Pump_FUEL_LH2.eta_d&nbsp;</td><td>Pump_FUEL_LH2.eta&nbsp;</td></tr>
+<tr><td>35&nbsp;</td><td>Pump_FUEL_LH2.m.N&nbsp;</td><td>Turbine_FUEL.m.N&nbsp;</td></tr>
+<tr><td>36&nbsp;</td><td>Pump_LOX_OXIDIZER.eta_d&nbsp;</td><td>Pump_LOX_OXIDIZER.eta&nbsp;</td></tr>
+<tr><td>37&nbsp;</td><td>Pump_LOX_OXIDIZER.m.N&nbsp;</td><td>Turbine_OXIDIZER.m.N&nbsp;</td></tr>
+<tr><td>38&nbsp;</td><td>ThrustMonitor_1.g.A_out&nbsp;</td><td>Comb_Chamb.A_out, Comb_Chamb.g.A_out, ThrustMonitor_1.A_out&nbsp;</td></tr>
+<tr><td>39&nbsp;</td><td>ThrustMonitor_1.g.Tt&nbsp;</td><td>Comb_Chamb.g.Tt&nbsp;</td></tr>
+<tr><td>40&nbsp;</td><td>ThrustMonitor_1.g.W&nbsp;</td><td>Comb_Chamb.g.W&nbsp;</td></tr>
+<tr><td>41&nbsp;</td><td>ThrustMonitor_1.g.c_star&nbsp;</td><td>Comb_Chamb.c_star, Comb_Chamb.g.c_star, ControlPanel.c_star&nbsp;</td></tr>
+<tr><td>42&nbsp;</td><td>ThrustMonitor_1.g.fluid&nbsp;</td><td>Comb_Chamb.g.fluid&nbsp;</td></tr>
+<tr><td>43&nbsp;</td><td>Turbine_FUEL.eta_d&nbsp;</td><td>Turbine_FUEL.eta&nbsp;</td></tr>
+<tr><td>44&nbsp;</td><td>Turbine_FUEL.f_in.Tt&nbsp;</td><td>Heat_exchanger_1.f_out.Tt&nbsp;</td></tr>
+<tr><td>45&nbsp;</td><td>Turbine_FUEL.f_in.fluid&nbsp;</td><td>Heat_exchanger_1.f_out.fluid, Nozzle_1.g.fluid, Turbine_FUEL.f_out.fluid, Turbine_OXIDIZER.f_in.fluid, Turbine_OXIDIZER.f_out.fluid&nbsp;</td></tr>
+<tr><td>46&nbsp;</td><td>Turbine_FUEL.f_in.pt&nbsp;</td><td>Heat_exchanger_1.f_out.pt&nbsp;</td></tr>
+<tr><td>47&nbsp;</td><td>Turbine_FUEL.rpm&nbsp;</td><td>Pump_FUEL_LH2.rpm&nbsp;</td></tr>
+<tr><td>48&nbsp;</td><td>Turbine_OXIDIZER.eta_d&nbsp;</td><td>Turbine_OXIDIZER.eta&nbsp;</td></tr>
+<tr><td>49&nbsp;</td><td>Turbine_OXIDIZER.f_in.Tt&nbsp;</td><td>Turbine_FUEL.f_out.Tt&nbsp;</td></tr>
+<tr><td>50&nbsp;</td><td>Turbine_OXIDIZER.f_in.pt&nbsp;</td><td>Turbine_FUEL.f_out.pt&nbsp;</td></tr>
+<tr><td>51&nbsp;</td><td>Turbine_OXIDIZER.rpm&nbsp;</td><td>Pump_LOX_OXIDIZER.rpm&nbsp;</td></tr>
+</table>
+<br/>
+</body></html>

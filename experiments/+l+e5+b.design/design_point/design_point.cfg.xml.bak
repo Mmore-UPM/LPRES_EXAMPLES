@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<tableWindow title="Table_1" x="30" y="1" dx="826" dy="611">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Comb_Chamb.A_th"/>
+					<var name="Comb_Chamb.T_c"/>
+					<var name="Injector_FUEL.A"/>
+					<var name="Injector_OXIDIZER.A"/>
+					<var name="Comb_Chamb.c_star"/>
+					<var name="ControlPanel.Thrust"/>
+					<var name="ControlPanel.Isp_0"/>
+					<var name="Turbine_FUEL.A_in"/>
+					<var name="SplitFrac_1.f_out.W"/>
+					<var name="Comb_Chamb.OF"/>
+					<var name="LPRES.Altitude"/>
+					<var name="SplitFrac_1.f_out.pt"/>
+					<var name="Pump_LOX_OXIDIZER.f_out.pt"/>
+					<var name="Comb_Chamb.A_wet"/>
+					<var name="Nozzle_1.A"/>
+					<var name="Pump_FUEL_LH2.A_in"/>
+					<var name="Pump_FUEL_LH2.r_m"/>
+					<var name="Pump_LOX_OXIDIZER.A_in"/>
+					<var name="Pump_LOX_OXIDIZER.r_m"/>
+					<var name="Turbine_OXIDIZER.A_in"/>
+					<var name="Contact_Wall_1.Q"/>
+					<var name="Turbine_OXIDIZER.f_out.Tt"/>
+					<var name="Turbine_FUEL.pi"/>
+					<var name="Turbine_OXIDIZER.pi"/>
+					<var name="ThrustMonitor_1.M_out"/>
+				</table>
+			</tableWindow>
+		</tab>
+		<tab name="Tab_2">
+			<plotWindow title="Plot_1" x="0" y="0" dx="992" dy="613">
+				<plot id="Plot_1" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="Comb_Chamb.OF">
+							<titleAxe value="Comb_Chamb.OF"/>
+							<scale minCurrent="-1.03583" maxCurrent="17.0324" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="-467.607" maxCurrent="822.98" scaleType="current"/>
+						</axeY>
+						<axeY2 isShowed="TRUE">
+							<titleAxe value=""/>
+							<scale minCurrent="-3840.86" maxCurrent="6483.84" scaleType="current"/>
+						</axeY2>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="Comb_Chamb.T_c" nick="" isY2="TRUE"/>
+							<var name="ControlPanel.Isp_0" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="192" visible="true" pos="right" >
+		<currentTab name="inputs"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+				<var name="Turbine_FUEL.f_in.W" value="3"/>
+				<var name="Turbine_OXIDIZER.f_in.W" value="3"/>
+				<var name="Comb_Chamb.OF" value="5.8"/>
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+				<column name="type" width="125"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="213"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="125"/> 
+				<column name="value" width="125"/> 
+				<column name="units" width="125"/> 
+				<column name="category" width="125"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="958" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="normal" height="1001" width="958" posX="1" posY="78" currentTab="Tab_1" />
+</experiment>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usedInputFiles version="1.0" library="LPRES_EXAMPLES" component="LE5B_valves" partition="valves_design" experiment="exp1" date="2020:07:12" time="12:24:44">
+  <rvar id="LPRES_EXAMPLES.globalDebugLevel" type="INTEGER" category="EXPERIMENT_VAR" inputcandidates="" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="0"/>
+  <rvar id="rc" type="BOOLEAN" category="EXPERIMENT_VAR" inputcandidates="FALSE*TRUE" inputunits="" hasboundequation="false" deckin="NO" deckout="NO" inputvaluedefault="TRUE"/>
+</usedInputFiles>
